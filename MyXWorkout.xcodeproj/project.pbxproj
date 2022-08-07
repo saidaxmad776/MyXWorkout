@@ -14,8 +14,14 @@
 		52DC2E68289E2AE300DADFAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52DC2E67289E2AE300DADFAE /* Assets.xcassets */; };
 		52DC2E6B289E2AE300DADFAE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52DC2E69289E2AE300DADFAE /* LaunchScreen.storyboard */; };
 		52DC2E76289E2B9E00DADFAE /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DC2E75289E2B9E00DADFAE /* MainVC.swift */; };
-		52DC2E7A289EAD4800DADFAE /* Ext + UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DC2E79289EAD4800DADFAE /* Ext + UIFont.swift */; };
 		52DC2E7E289EBA5400DADFAE /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DC2E7D289EBA5400DADFAE /* CalendarView.swift */; };
+		52DC2E80289F9A0300DADFAE /* Ext + UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DC2E7F289F9A0300DADFAE /* Ext + UIFont.swift */; };
+		52DC2E82289F9DC500DADFAE /* WeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DC2E81289F9DC500DADFAE /* WeatherView.swift */; };
+		52DC2E84289FBE2E00DADFAE /* Ext + UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DC2E83289FBE2E00DADFAE /* Ext + UIColor.swift */; };
+		52DC2E86289FBE5A00DADFAE /* Ext + UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DC2E85289FBE5A00DADFAE /* Ext + UIView.swift */; };
+		52DC2E88289FBE8C00DADFAE /* Ext + UIStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DC2E87289FBE8C00DADFAE /* Ext + UIStackView.swift */; };
+		52DC2E8A289FBEB100DADFAE /* Ext + UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DC2E89289FBEB100DADFAE /* Ext + UILabel.swift */; };
+		52DC2E8D289FC3C000DADFAE /* CalendarCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DC2E8C289FC3C000DADFAE /* CalendarCVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,8 +34,14 @@
 		52DC2E6A289E2AE300DADFAE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		52DC2E6C289E2AE300DADFAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52DC2E75289E2B9E00DADFAE /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
-		52DC2E79289EAD4800DADFAE /* Ext + UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext + UIFont.swift"; sourceTree = "<group>"; };
 		52DC2E7D289EBA5400DADFAE /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		52DC2E7F289F9A0300DADFAE /* Ext + UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext + UIFont.swift"; sourceTree = "<group>"; };
+		52DC2E81289F9DC500DADFAE /* WeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherView.swift; sourceTree = "<group>"; };
+		52DC2E83289FBE2E00DADFAE /* Ext + UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext + UIColor.swift"; sourceTree = "<group>"; };
+		52DC2E85289FBE5A00DADFAE /* Ext + UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext + UIView.swift"; sourceTree = "<group>"; };
+		52DC2E87289FBE8C00DADFAE /* Ext + UIStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext + UIStackView.swift"; sourceTree = "<group>"; };
+		52DC2E89289FBEB100DADFAE /* Ext + UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext + UILabel.swift"; sourceTree = "<group>"; };
+		52DC2E8C289FC3C000DADFAE /* CalendarCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,7 +124,10 @@
 		52DC2E78289EA2AE00DADFAE /* Ext + UIKit */ = {
 			isa = PBXGroup;
 			children = (
-				52DC2E79289EAD4800DADFAE /* Ext + UIFont.swift */,
+				52DC2E83289FBE2E00DADFAE /* Ext + UIColor.swift */,
+				52DC2E85289FBE5A00DADFAE /* Ext + UIView.swift */,
+				52DC2E87289FBE8C00DADFAE /* Ext + UIStackView.swift */,
+				52DC2E89289FBEB100DADFAE /* Ext + UILabel.swift */,
 			);
 			path = "Ext + UIKit";
 			sourceTree = "<group>";
@@ -120,6 +135,7 @@
 		52DC2E7B289EADD500DADFAE /* Font */ = {
 			isa = PBXGroup;
 			children = (
+				52DC2E7F289F9A0300DADFAE /* Ext + UIFont.swift */,
 			);
 			path = Font;
 			sourceTree = "<group>";
@@ -127,9 +143,19 @@
 		52DC2E7C289EBA3300DADFAE /* MainVC */ = {
 			isa = PBXGroup;
 			children = (
+				52DC2E8B289FC39D00DADFAE /* Cells */,
 				52DC2E7D289EBA5400DADFAE /* CalendarView.swift */,
+				52DC2E81289F9DC500DADFAE /* WeatherView.swift */,
 			);
 			path = MainVC;
+			sourceTree = "<group>";
+		};
+		52DC2E8B289FC39D00DADFAE /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				52DC2E8C289FC3C000DADFAE /* CalendarCVC.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -205,10 +231,16 @@
 			files = (
 				52DC2E63289E2AE200DADFAE /* ViewController.swift in Sources */,
 				52DC2E76289E2B9E00DADFAE /* MainVC.swift in Sources */,
+				52DC2E8D289FC3C000DADFAE /* CalendarCVC.swift in Sources */,
+				52DC2E80289F9A0300DADFAE /* Ext + UIFont.swift in Sources */,
+				52DC2E88289FBE8C00DADFAE /* Ext + UIStackView.swift in Sources */,
 				52DC2E7E289EBA5400DADFAE /* CalendarView.swift in Sources */,
 				52DC2E5F289E2AE200DADFAE /* AppDelegate.swift in Sources */,
-				52DC2E7A289EAD4800DADFAE /* Ext + UIFont.swift in Sources */,
+				52DC2E86289FBE5A00DADFAE /* Ext + UIView.swift in Sources */,
+				52DC2E82289F9DC500DADFAE /* WeatherView.swift in Sources */,
 				52DC2E61289E2AE200DADFAE /* SceneDelegate.swift in Sources */,
+				52DC2E84289FBE2E00DADFAE /* Ext + UIColor.swift in Sources */,
+				52DC2E8A289FBEB100DADFAE /* Ext + UILabel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
