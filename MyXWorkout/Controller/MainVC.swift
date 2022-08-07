@@ -49,8 +49,31 @@ class MainVC: ViewController {
         return button
     }()
     
+    private let workoutTodayLabel: UILabel = {
+       let label = UILabel()
+        label.text = "Workout Today"
+        label.textColor = .specialLightBrown
+        label.font = .robotoMedium14()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
+    private let tableView: UITableView = {
+       let tableView = UITableView()
+        tableView.backgroundColor = .clear
+        tableView.separatorStyle = .none
+        tableView.bounces = false
+        tableView.showsVerticalScrollIndicator = false
+        tableView.delaysContentTouches = false
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        return tableView
+    }()
+    
     private let calendarView = CalendarView()
     private let weatherView = WeatherView()
+    
+    private let idWorkoutTableViewCell = "idWorkoutTableViewCell"
+
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
@@ -63,6 +86,7 @@ class MainVC: ViewController {
         
         setupView()
         setConstraints()
+        setDelegate()
     }
     
     private func setupView() {
@@ -74,13 +98,54 @@ class MainVC: ViewController {
         view.addSubview(userPhotoImageView)
         view.addSubview(addWorkoutButton)
         view.addSubview(weatherView)
+        view.addSubview(workoutTodayLabel)
         
+        view.addSubview(tableView)
+        tableView.register(WorkoutTVC.self, forCellReuseIdentifier: idWorkoutTableViewCell)
+        
+    }
+    
+    private func setDelegate() {
+        
+        tableView.dataSource = self
+        tableView.delegate = self
     }
     
     @objc private func addWorkoutButtonTapped() {
-        
+        let newWorkoutViewController = NewWorkoutVC()
+        newWorkoutViewController.modalPresentationStyle = .fullScreen
+        present(newWorkoutViewController, animated: true)
     }
     
+}
+
+
+//MARK: - UITableViewDataSource
+
+extension MainVC: UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        7
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: idWorkoutTableViewCell, for: indexPath)
+                as? WorkoutTVC else { return UITableViewCell() }
+        
+        cell.backgroundColor = .clear
+        return cell
+    }
+}
+
+//MARK: - UITableViewDelegate
+
+extension MainVC: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        100
+    }
+        
+      
 }
 
 extension MainVC {
@@ -117,6 +182,13 @@ extension MainVC {
             weatherView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10),
             weatherView.heightAnchor.constraint(equalToConstant: 80),
             
+            workoutTodayLabel.topAnchor.constraint(equalTo: addWorkoutButton.bottomAnchor, constant: 10),
+            workoutTodayLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
+            
+            tableView.topAnchor.constraint(equalTo: workoutTodayLabel.bottomAnchor, constant: 0),
+            tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0),
+            tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0),
+            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0),
         ])
     }
 }

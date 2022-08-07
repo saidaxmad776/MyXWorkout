@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		52DC2E5F289E2AE200DADFAE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DC2E5E289E2AE200DADFAE /* AppDelegate.swift */; };
 		52DC2E61289E2AE200DADFAE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DC2E60289E2AE200DADFAE /* SceneDelegate.swift */; };
-		52DC2E63289E2AE200DADFAE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DC2E62289E2AE200DADFAE /* ViewController.swift */; };
 		52DC2E66289E2AE200DADFAE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52DC2E64289E2AE200DADFAE /* Main.storyboard */; };
 		52DC2E68289E2AE300DADFAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52DC2E67289E2AE300DADFAE /* Assets.xcassets */; };
 		52DC2E6B289E2AE300DADFAE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52DC2E69289E2AE300DADFAE /* LaunchScreen.storyboard */; };
@@ -22,13 +21,22 @@
 		52DC2E88289FBE8C00DADFAE /* Ext + UIStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DC2E87289FBE8C00DADFAE /* Ext + UIStackView.swift */; };
 		52DC2E8A289FBEB100DADFAE /* Ext + UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DC2E89289FBEB100DADFAE /* Ext + UILabel.swift */; };
 		52DC2E8D289FC3C000DADFAE /* CalendarCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DC2E8C289FC3C000DADFAE /* CalendarCVC.swift */; };
+		52DC2E8F289FC8A400DADFAE /* WorkoutTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DC2E8E289FC8A400DADFAE /* WorkoutTVC.swift */; };
+		52DC2E91289FCDBE00DADFAE /* StatisticVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DC2E90289FCDBE00DADFAE /* StatisticVC.swift */; };
+		52DC2E94289FCEF400DADFAE /* StatisticTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DC2E93289FCEF400DADFAE /* StatisticTVC.swift */; };
+		52DC2E9628A0033F00DADFAE /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DC2E9528A0033F00DADFAE /* MainTabBarController.swift */; };
+		52DC2E9828A0039600DADFAE /* ProfilVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DC2E9728A0039600DADFAE /* ProfilVC.swift */; };
+		52DC2E9C28A005AC00DADFAE /* ProfileCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DC2E9B28A005AC00DADFAE /* ProfileCVC.swift */; };
+		52DC2E9E28A00CDD00DADFAE /* NewWorkoutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DC2E9D28A00CDC00DADFAE /* NewWorkoutVC.swift */; };
+		52DC2EA128A00E1700DADFAE /* DateAndRepeatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DC2EA028A00E1700DADFAE /* DateAndRepeatView.swift */; };
+		52DC2EA328A00E3D00DADFAE /* RepsOrTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DC2EA228A00E3D00DADFAE /* RepsOrTimerView.swift */; };
+		52DC2EA528A015DB00DADFAE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DC2EA428A015DA00DADFAE /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		52DC2E5B289E2AE200DADFAE /* MyXWorkout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyXWorkout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52DC2E5E289E2AE200DADFAE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52DC2E60289E2AE200DADFAE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		52DC2E62289E2AE200DADFAE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		52DC2E65289E2AE200DADFAE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		52DC2E67289E2AE300DADFAE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		52DC2E6A289E2AE300DADFAE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -42,6 +50,16 @@
 		52DC2E87289FBE8C00DADFAE /* Ext + UIStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext + UIStackView.swift"; sourceTree = "<group>"; };
 		52DC2E89289FBEB100DADFAE /* Ext + UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext + UILabel.swift"; sourceTree = "<group>"; };
 		52DC2E8C289FC3C000DADFAE /* CalendarCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCVC.swift; sourceTree = "<group>"; };
+		52DC2E8E289FC8A400DADFAE /* WorkoutTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutTVC.swift; sourceTree = "<group>"; };
+		52DC2E90289FCDBE00DADFAE /* StatisticVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticVC.swift; sourceTree = "<group>"; };
+		52DC2E93289FCEF400DADFAE /* StatisticTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticTVC.swift; sourceTree = "<group>"; };
+		52DC2E9528A0033F00DADFAE /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		52DC2E9728A0039600DADFAE /* ProfilVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilVC.swift; sourceTree = "<group>"; };
+		52DC2E9B28A005AC00DADFAE /* ProfileCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCVC.swift; sourceTree = "<group>"; };
+		52DC2E9D28A00CDC00DADFAE /* NewWorkoutVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewWorkoutVC.swift; sourceTree = "<group>"; };
+		52DC2EA028A00E1700DADFAE /* DateAndRepeatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateAndRepeatView.swift; sourceTree = "<group>"; };
+		52DC2EA228A00E3D00DADFAE /* RepsOrTimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepsOrTimerView.swift; sourceTree = "<group>"; };
+		52DC2EA428A015DA00DADFAE /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,7 +101,7 @@
 				52DC2E67289E2AE300DADFAE /* Assets.xcassets */,
 				52DC2E69289E2AE300DADFAE /* LaunchScreen.storyboard */,
 				52DC2E64289E2AE200DADFAE /* Main.storyboard */,
-				52DC2E62289E2AE200DADFAE /* ViewController.swift */,
+				52DC2EA428A015DA00DADFAE /* ViewController.swift */,
 				52DC2E6C289E2AE300DADFAE /* Info.plist */,
 			);
 			path = MyXWorkout;
@@ -92,7 +110,11 @@
 		52DC2E72289E2B5D00DADFAE /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				52DC2E9528A0033F00DADFAE /* MainTabBarController.swift */,
 				52DC2E75289E2B9E00DADFAE /* MainVC.swift */,
+				52DC2E9D28A00CDC00DADFAE /* NewWorkoutVC.swift */,
+				52DC2E90289FCDBE00DADFAE /* StatisticVC.swift */,
+				52DC2E9728A0039600DADFAE /* ProfilVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -100,6 +122,9 @@
 		52DC2E73289E2B6600DADFAE /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				52DC2E9F28A00DEF00DADFAE /* NewWorkoutVC */,
+				52DC2E9928A0058900DADFAE /* ProfileVC */,
+				52DC2E92289FCED400DADFAE /* StatisticVC */,
 				52DC2E7C289EBA3300DADFAE /* MainVC */,
 			);
 			path = Views;
@@ -154,8 +179,42 @@
 			isa = PBXGroup;
 			children = (
 				52DC2E8C289FC3C000DADFAE /* CalendarCVC.swift */,
+				52DC2E8E289FC8A400DADFAE /* WorkoutTVC.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		52DC2E92289FCED400DADFAE /* StatisticVC */ = {
+			isa = PBXGroup;
+			children = (
+				52DC2E93289FCEF400DADFAE /* StatisticTVC.swift */,
+			);
+			path = StatisticVC;
+			sourceTree = "<group>";
+		};
+		52DC2E9928A0058900DADFAE /* ProfileVC */ = {
+			isa = PBXGroup;
+			children = (
+				52DC2E9A28A0059C00DADFAE /* Cells */,
+			);
+			path = ProfileVC;
+			sourceTree = "<group>";
+		};
+		52DC2E9A28A0059C00DADFAE /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				52DC2E9B28A005AC00DADFAE /* ProfileCVC.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		52DC2E9F28A00DEF00DADFAE /* NewWorkoutVC */ = {
+			isa = PBXGroup;
+			children = (
+				52DC2EA028A00E1700DADFAE /* DateAndRepeatView.swift */,
+				52DC2EA228A00E3D00DADFAE /* RepsOrTimerView.swift */,
+			);
+			path = NewWorkoutVC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,18 +288,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52DC2E63289E2AE200DADFAE /* ViewController.swift in Sources */,
 				52DC2E76289E2B9E00DADFAE /* MainVC.swift in Sources */,
+				52DC2EA328A00E3D00DADFAE /* RepsOrTimerView.swift in Sources */,
+				52DC2E9828A0039600DADFAE /* ProfilVC.swift in Sources */,
+				52DC2EA128A00E1700DADFAE /* DateAndRepeatView.swift in Sources */,
 				52DC2E8D289FC3C000DADFAE /* CalendarCVC.swift in Sources */,
 				52DC2E80289F9A0300DADFAE /* Ext + UIFont.swift in Sources */,
 				52DC2E88289FBE8C00DADFAE /* Ext + UIStackView.swift in Sources */,
+				52DC2E94289FCEF400DADFAE /* StatisticTVC.swift in Sources */,
 				52DC2E7E289EBA5400DADFAE /* CalendarView.swift in Sources */,
+				52DC2E9E28A00CDD00DADFAE /* NewWorkoutVC.swift in Sources */,
 				52DC2E5F289E2AE200DADFAE /* AppDelegate.swift in Sources */,
 				52DC2E86289FBE5A00DADFAE /* Ext + UIView.swift in Sources */,
 				52DC2E82289F9DC500DADFAE /* WeatherView.swift in Sources */,
+				52DC2E9628A0033F00DADFAE /* MainTabBarController.swift in Sources */,
+				52DC2E91289FCDBE00DADFAE /* StatisticVC.swift in Sources */,
 				52DC2E61289E2AE200DADFAE /* SceneDelegate.swift in Sources */,
+				52DC2E9C28A005AC00DADFAE /* ProfileCVC.swift in Sources */,
 				52DC2E84289FBE2E00DADFAE /* Ext + UIColor.swift in Sources */,
+				52DC2EA528A015DB00DADFAE /* ViewController.swift in Sources */,
 				52DC2E8A289FBEB100DADFAE /* Ext + UILabel.swift in Sources */,
+				52DC2E8F289FC8A400DADFAE /* WorkoutTVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -397,6 +465,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -425,6 +494,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
