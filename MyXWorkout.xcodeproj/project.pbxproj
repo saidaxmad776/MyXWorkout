@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		470BED37554CDC3B2D493035 /* Pods_MyXWorkout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9449CBDCEC23293A7E829241 /* Pods_MyXWorkout.framework */; };
 		52DC2E5F289E2AE200DADFAE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DC2E5E289E2AE200DADFAE /* AppDelegate.swift */; };
 		52DC2E61289E2AE200DADFAE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DC2E60289E2AE200DADFAE /* SceneDelegate.swift */; };
 		52DC2E66289E2AE200DADFAE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52DC2E64289E2AE200DADFAE /* Main.storyboard */; };
@@ -31,6 +32,9 @@
 		52DC2EA128A00E1700DADFAE /* DateAndRepeatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DC2EA028A00E1700DADFAE /* DateAndRepeatView.swift */; };
 		52DC2EA328A00E3D00DADFAE /* RepsOrTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DC2EA228A00E3D00DADFAE /* RepsOrTimerView.swift */; };
 		52DC2EA528A015DB00DADFAE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DC2EA428A015DA00DADFAE /* ViewController.swift */; };
+		52DC2EA728A114AD00DADFAE /* WorkoutModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DC2EA628A114AD00DADFAE /* WorkoutModel.swift */; };
+		52DC2EAA28A1167300DADFAE /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DC2EA928A1167300DADFAE /* RealmManager.swift */; };
+		52DC2EAC28A1271500DADFAE /* Ext + Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DC2EAB28A1271500DADFAE /* Ext + Date.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +64,12 @@
 		52DC2EA028A00E1700DADFAE /* DateAndRepeatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateAndRepeatView.swift; sourceTree = "<group>"; };
 		52DC2EA228A00E3D00DADFAE /* RepsOrTimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepsOrTimerView.swift; sourceTree = "<group>"; };
 		52DC2EA428A015DA00DADFAE /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		52DC2EA628A114AD00DADFAE /* WorkoutModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutModel.swift; sourceTree = "<group>"; };
+		52DC2EA928A1167300DADFAE /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
+		52DC2EAB28A1271500DADFAE /* Ext + Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext + Date.swift"; sourceTree = "<group>"; };
+		543FEBFF3FB2087CB5F31442 /* Pods-MyXWorkout.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyXWorkout.release.xcconfig"; path = "Target Support Files/Pods-MyXWorkout/Pods-MyXWorkout.release.xcconfig"; sourceTree = "<group>"; };
+		9449CBDCEC23293A7E829241 /* Pods_MyXWorkout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyXWorkout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9E8FD0861317A8F6B5B276EE /* Pods-MyXWorkout.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyXWorkout.debug.xcconfig"; path = "Target Support Files/Pods-MyXWorkout/Pods-MyXWorkout.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				470BED37554CDC3B2D493035 /* Pods_MyXWorkout.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +89,8 @@
 			children = (
 				52DC2E5D289E2AE200DADFAE /* MyXWorkout */,
 				52DC2E5C289E2AE200DADFAE /* Products */,
+				5FC73D4065DFA3F37EA95E41 /* Pods */,
+				C74382407F1F97E6457CB931 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -98,6 +111,7 @@
 				52DC2E74289E2B7000DADFAE /* Model */,
 				52DC2E73289E2B6600DADFAE /* Views */,
 				52DC2E72289E2B5D00DADFAE /* Controller */,
+				52DC2EA828A1165000DADFAE /* Services */,
 				52DC2E67289E2AE300DADFAE /* Assets.xcassets */,
 				52DC2E69289E2AE300DADFAE /* LaunchScreen.storyboard */,
 				52DC2E64289E2AE200DADFAE /* Main.storyboard */,
@@ -133,6 +147,7 @@
 		52DC2E74289E2B7000DADFAE /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				52DC2EA628A114AD00DADFAE /* WorkoutModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -153,6 +168,7 @@
 				52DC2E85289FBE5A00DADFAE /* Ext + UIView.swift */,
 				52DC2E87289FBE8C00DADFAE /* Ext + UIStackView.swift */,
 				52DC2E89289FBEB100DADFAE /* Ext + UILabel.swift */,
+				52DC2EAB28A1271500DADFAE /* Ext + Date.swift */,
 			);
 			path = "Ext + UIKit";
 			sourceTree = "<group>";
@@ -217,6 +233,31 @@
 			path = NewWorkoutVC;
 			sourceTree = "<group>";
 		};
+		52DC2EA828A1165000DADFAE /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				52DC2EA928A1167300DADFAE /* RealmManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		5FC73D4065DFA3F37EA95E41 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9E8FD0861317A8F6B5B276EE /* Pods-MyXWorkout.debug.xcconfig */,
+				543FEBFF3FB2087CB5F31442 /* Pods-MyXWorkout.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		C74382407F1F97E6457CB931 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9449CBDCEC23293A7E829241 /* Pods_MyXWorkout.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -224,9 +265,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 52DC2E6F289E2AE400DADFAE /* Build configuration list for PBXNativeTarget "MyXWorkout" */;
 			buildPhases = (
+				35F1B90EAFDAED006F4AADB7 /* [CP] Check Pods Manifest.lock */,
 				52DC2E57289E2AE200DADFAE /* Sources */,
 				52DC2E58289E2AE200DADFAE /* Frameworks */,
 				52DC2E59289E2AE200DADFAE /* Resources */,
+				822ACE45C3465F2986E8AB6C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -283,6 +326,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		35F1B90EAFDAED006F4AADB7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MyXWorkout-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		822ACE45C3465F2986E8AB6C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MyXWorkout/Pods-MyXWorkout-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MyXWorkout/Pods-MyXWorkout-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MyXWorkout/Pods-MyXWorkout-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		52DC2E57289E2AE200DADFAE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -293,6 +378,7 @@
 				52DC2E9828A0039600DADFAE /* ProfilVC.swift in Sources */,
 				52DC2EA128A00E1700DADFAE /* DateAndRepeatView.swift in Sources */,
 				52DC2E8D289FC3C000DADFAE /* CalendarCVC.swift in Sources */,
+				52DC2EAA28A1167300DADFAE /* RealmManager.swift in Sources */,
 				52DC2E80289F9A0300DADFAE /* Ext + UIFont.swift in Sources */,
 				52DC2E88289FBE8C00DADFAE /* Ext + UIStackView.swift in Sources */,
 				52DC2E94289FCEF400DADFAE /* StatisticTVC.swift in Sources */,
@@ -300,11 +386,13 @@
 				52DC2E9E28A00CDD00DADFAE /* NewWorkoutVC.swift in Sources */,
 				52DC2E5F289E2AE200DADFAE /* AppDelegate.swift in Sources */,
 				52DC2E86289FBE5A00DADFAE /* Ext + UIView.swift in Sources */,
+				52DC2EAC28A1271500DADFAE /* Ext + Date.swift in Sources */,
 				52DC2E82289F9DC500DADFAE /* WeatherView.swift in Sources */,
 				52DC2E9628A0033F00DADFAE /* MainTabBarController.swift in Sources */,
 				52DC2E91289FCDBE00DADFAE /* StatisticVC.swift in Sources */,
 				52DC2E61289E2AE200DADFAE /* SceneDelegate.swift in Sources */,
 				52DC2E9C28A005AC00DADFAE /* ProfileCVC.swift in Sources */,
+				52DC2EA728A114AD00DADFAE /* WorkoutModel.swift in Sources */,
 				52DC2E84289FBE2E00DADFAE /* Ext + UIColor.swift in Sources */,
 				52DC2EA528A015DB00DADFAE /* ViewController.swift in Sources */,
 				52DC2E8A289FBEB100DADFAE /* Ext + UILabel.swift in Sources */,
@@ -452,6 +540,7 @@
 		};
 		52DC2E70289E2AE400DADFAE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9E8FD0861317A8F6B5B276EE /* Pods-MyXWorkout.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -481,6 +570,7 @@
 		};
 		52DC2E71289E2AE400DADFAE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 543FEBFF3FB2087CB5F31442 /* Pods-MyXWorkout.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
