@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class MainVC: ViewController {
     
@@ -72,6 +73,9 @@ class MainVC: ViewController {
     private let calendarView = CalendarView()
     private let weatherView = WeatherView()
     
+    private let localRealm = try! Realm()
+    private var workoutArray: Results<WorkoutModel>!
+    
     private let idWorkoutTableViewCell = "idWorkoutTableViewCell"
 
     
@@ -80,6 +84,14 @@ class MainVC: ViewController {
         
         userPhotoImageView.layer.cornerRadius = userPhotoImageView.frame.width / 2
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        getWorkouts(date: Date())
+        tableView.reloadData()
+    }
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -109,6 +121,7 @@ class MainVC: ViewController {
         
         tableView.dataSource = self
         tableView.delegate = self
+        calendarView.cellCollectionViewDelegate = self
     }
     
     @objc private func addWorkoutButtonTapped() {
@@ -117,6 +130,45 @@ class MainVC: ViewController {
         present(newWorkoutViewController, animated: true)
     }
     
+    private func getWorkouts(date: Date) {
+        
+        let weekday = date.getWeekdayNumber()
+        let dateStart = date.startEndDate().0
+        let dateEnd = date.startEndDate().1
+        
+        let predicateRepeat = NSPredicate(format: "workoutNumberOfDay = \(weekday) AND workoutRepeat = true")
+        let predicateUnrepeat = NSPredicate(format: "workoutRepeat = false AND workoutDate BETWEEN %@", [dateStart, dateEnd])
+        let compound = NSCompoundPredicate(type: .or, subpredicates: [predicateRepeat, predicateUnrepeat])
+        
+        workoutArray = localRealm.objects(WorkoutModel.self).filter(compound).sorted(byKeyPath: "workoutName")
+        
+        tableView.reloadData()
+    }
+}
+
+extension MainVC: StartWorkoutProtocol {
+    
+    func startButtonTapped(model: WorkoutModel) {
+        
+//        if model.workoutTimer == 0 {
+//            let startWorkoutViewController = RepsWorkoutViewController()
+//            startWorkoutViewController.modalPresentationStyle = .fullScreen
+//            startWorkoutViewController.workoutModel = model
+//            present(startWorkoutViewController, animated: true)
+//        } else {
+//            let timerWorkoutViewController = TimerWorkoutViewController()
+//            timerWorkoutViewController.modalPresentationStyle = .fullScreen
+//            timerWorkoutViewController.workoutModel = model
+//            present(timerWorkoutViewController, animated: true)
+//        }
+    }
+}
+
+extension MainVC: SelectCollectionViewItemProtocol {
+    func selectItem(date: Date) {
+        getWorkouts(date: date)
+    }
+
 }
 
 
@@ -125,7 +177,7 @@ class MainVC: ViewController {
 extension MainVC: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        7
+        workoutArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -133,9 +185,14 @@ extension MainVC: UITableViewDataSource {
                 as? WorkoutTVC else { return UITableViewCell() }
         
         cell.backgroundColor = .clear
+        let model = workoutArray[indexPath.row]
+        cell.cellConfigure(model: model)
+        cell.cellStartWorkoutDelegate = self
+        
         return cell
     }
 }
+
 
 //MARK: - UITableViewDelegate
 
@@ -145,7 +202,19 @@ extension MainVC: UITableViewDelegate {
         100
     }
         
-      
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        
+        let action = UIContextualAction(style: .destructive, title: "") { _, _, _ in
+            let deleteModel = self.workoutArray[indexPath.row]
+            RealmManager.shared.deleteWorkoutModel(model: deleteModel)
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+        }
+
+        action.backgroundColor = .white
+        action.image = UIImage(named: "delete")
+        
+        return UISwipeActionsConfiguration(actions: [action])
+    }
 }
 
 extension MainVC {

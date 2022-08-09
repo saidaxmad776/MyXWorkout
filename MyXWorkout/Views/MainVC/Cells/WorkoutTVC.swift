@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol StartWorkoutProtocol: AnyObject {
+    func startButtonTapped(model: WorkoutModel)
+}
+
 class WorkoutTVC: UITableViewCell {
     
     private let backgroundCell: UIView = {
@@ -76,6 +80,9 @@ class WorkoutTVC: UITableViewCell {
     }()
     
     var labelsStackView = UIStackView()
+    var workoutModel = WorkoutModel()
+
+    weak var cellStartWorkoutDelegate: StartWorkoutProtocol?
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -105,8 +112,38 @@ class WorkoutTVC: UITableViewCell {
     }
     
     @objc private func startButtonTapped() {
-        
+        cellStartWorkoutDelegate?.startButtonTapped(model: workoutModel)
  }
+    
+    func cellConfigure(model: WorkoutModel) {
+        
+        workoutModel = model
+        
+        workoutNameLabel.text = model.workoutName
+        
+        let (min, sec) = { (secs: Int) -> (Int, Int) in
+            return (secs / 60, secs % 60)}(model.workoutTimer)
+        
+        workoutRepsLabel.text = model.workoutTimer == 0 ? "Reps: \(model.workoutReps)" : "Timer: \(min) min \(sec) sec"
+        workoutSetsLabel.text = "Sets: \(model.workoutSets)"
+
+        if model.workoutStatus {
+            startButton.setTitle("COMPLETE", for: .normal)
+            startButton.tintColor = .white
+            startButton.backgroundColor = .specialGreen
+            startButton.isEnabled = false
+        } else {
+            startButton.setTitle("START", for: .normal)
+            startButton.tintColor = .specialDarkGreen
+            startButton.backgroundColor = .specialYellow
+            startButton.isEnabled = true
+        }
+        
+        guard let imageData = model.workoutImage else { return }
+        guard let image = UIImage(data: imageData) else { return }
+        
+        workoutImageView.image = image
+    }
     
 }
 

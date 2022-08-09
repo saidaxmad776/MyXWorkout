@@ -81,6 +81,7 @@ class NewWorkoutVC: UIViewController {
         setupViews()
         setDelegates()
         setConstraints()
+        addTaps()
     }
     
     private func setupViews() {
@@ -102,14 +103,15 @@ class NewWorkoutVC: UIViewController {
         nameTextField.delegate = self
     }
     
+    
+    
     @objc private func closeButtonTapped() {
         dismiss(animated: true)
     }
     
     @objc private func saveButtonTapped() {
         setModel()
-        RealmManager.shared.saveWorkoutModel(model: workoutModel)
-        workoutModel = WorkoutModel()
+        saveModel()
     }
     
     private func setModel() {
@@ -129,6 +131,37 @@ class NewWorkoutVC: UIViewController {
         guard let imageData = testImage?.pngData() else { return }
         workoutModel.workoutImage = imageData
     }
+    
+    private func saveModel() {
+        guard let text = nameTextField.text else { return }
+        let count = text.filter { $0.isNumber || $0.isLetter }.count
+
+        if count != 0 &&
+            workoutModel.workoutSets != 0 &&
+            (workoutModel.workoutReps != 0 || workoutModel.workoutTimer != 0) {
+            RealmManager.shared.saveWorkoutModel(model: workoutModel)
+            workoutModel = WorkoutModel()
+            alertOk(title: "Success", message: nil)
+            refreshObjects()
+        } else {
+            alertOk(title: "Error", message: "Enter all parameters")
+        }
+    }
+    
+    private func refreshObjects() {
+        dateAndRepeatView.refreshDatePickerAndSwitch()
+        repsOrTimerView.refreshLabelsAndSliders()
+        nameTextField.text = ""
+    }
+    
+    private func addTaps() {
+        let tapScreen = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
+        view.addGestureRecognizer(tapScreen)
+        
+        let swipeScreen = UISwipeGestureRecognizer(target: self, action: #selector(swipeHideKeyboard))
+        swipeScreen.cancelsTouchesInView = false
+        view.addGestureRecognizer(swipeScreen)
+    }
 
     
     @objc private func hideKeyboard() {
@@ -144,7 +177,9 @@ class NewWorkoutVC: UIViewController {
 
 extension NewWorkoutVC: UITextFieldDelegate {
     
-    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        nameTextField.resignFirstResponder()
+    }
 }
 
 //MARK: - SetConstraints

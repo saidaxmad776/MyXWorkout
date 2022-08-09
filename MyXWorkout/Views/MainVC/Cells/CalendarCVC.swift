@@ -58,7 +58,15 @@ class CalendarCVC: UICollectionViewCell {
         addSubview(dayOfWeekLabel)
         addSubview(numberOfDayLabel)
     }
+    
+    private func cellConfigure(numberOfDay: String, dayOFWeek: String) {
+        numberOfDayLabel.text = numberOfDay
+        dayOfWeekLabel.text = dayOFWeek
+    }
   
+    public func dateForCell(numberOfDay: String, dayOFWeek: String) {
+        cellConfigure(numberOfDay: numberOfDay, dayOFWeek: dayOFWeek)
+    }
     
     private func setConstraints() {
         

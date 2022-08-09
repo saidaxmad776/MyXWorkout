@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol SelectCollectionViewItemProtocol: AnyObject {
+    func selectItem(date: Date)
+}
+
 class CalendarView: UIView {
     
     private let collectionView: UICollectionView = {
@@ -20,6 +24,8 @@ class CalendarView: UIView {
     }()
     
     private let idCalendarCell = "idCalendarCell"
+    
+    weak var cellCollectionViewDelegate: SelectCollectionViewItemProtocol?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -59,17 +65,39 @@ extension CalendarView: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: idCalendarCell, for: indexPath) as? CalendarCVC else { return UICollectionViewCell() }
         
+        let dateTimeZone = Date()
+        let weekArray = dateTimeZone.getWeekArray()
+        cell.dateForCell(numberOfDay: weekArray[1][indexPath.item], dayOFWeek: weekArray[0][indexPath.item])
+        
+        if indexPath.item == 6 {
+            collectionView.selectItem(at: indexPath, animated: true, scrollPosition: .right)
+        }
+        
         return cell
     }
-    
-    
-    
 }
 
 extension CalendarView: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("tap")
+        
+        let dateTimeZone = Date()
+        switch indexPath.item {
+        case 0:
+            cellCollectionViewDelegate?.selectItem(date: dateTimeZone.offsetDays(days: 6))
+        case 1:
+            cellCollectionViewDelegate?.selectItem(date: dateTimeZone.offsetDays(days: 5))
+        case 2:
+            cellCollectionViewDelegate?.selectItem(date: dateTimeZone.offsetDays(days: 4))
+        case 3:
+            cellCollectionViewDelegate?.selectItem(date: dateTimeZone.offsetDays(days: 3))
+        case 4:
+            cellCollectionViewDelegate?.selectItem(date: dateTimeZone.offsetDays(days: 2))
+        case 5:
+            cellCollectionViewDelegate?.selectItem(date: dateTimeZone.offsetDays(days: 1))
+        default:
+            cellCollectionViewDelegate?.selectItem(date: dateTimeZone.offsetDays(days: 0))
+        }
     }
 }
 
