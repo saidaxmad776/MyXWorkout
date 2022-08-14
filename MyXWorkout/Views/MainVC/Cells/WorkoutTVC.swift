@@ -70,9 +70,9 @@ class WorkoutTVC: UITableViewCell {
         let button = UIButton(type: .system)
         button.layer.cornerRadius = 10
         button.addShadowOnView()
-        button.backgroundColor = .specialYellow
-        button.tintColor = .specialDarkGreen
-        button.setTitle("START", for: .normal)
+//        button.backgroundColor = .specialYellow
+//        button.tintColor = .specialDarkGreen
+//        button.setTitle("START", for: .normal)
         button.titleLabel?.font = .robotoBold16()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.addTarget(self, action: #selector(startButtonTapped), for: .touchUpInside)
@@ -142,7 +142,7 @@ class WorkoutTVC: UITableViewCell {
         guard let imageData = model.workoutImage else { return }
         guard let image = UIImage(data: imageData) else { return }
         
-        workoutImageView.image = image
+        workoutImageView.image = image.withRenderingMode(.alwaysTemplate)
     }
     
 }

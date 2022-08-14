@@ -36,6 +36,13 @@
 		52DC2EAA28A1167300DADFAE /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DC2EA928A1167300DADFAE /* RealmManager.swift */; };
 		52DC2EAC28A1271500DADFAE /* Ext + Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DC2EAB28A1271500DADFAE /* Ext + Date.swift */; };
 		52DC2EAF28A1447300DADFAE /* SimpleAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DC2EAE28A1447300DADFAE /* SimpleAlert.swift */; };
+		52DC2EB128A29CC000DADFAE /* RepsWorkoutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DC2EB028A29CC000DADFAE /* RepsWorkoutVC.swift */; };
+		52DC2EB328A29CD000DADFAE /* TimerWorkoutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DC2EB228A29CD000DADFAE /* TimerWorkoutVC.swift */; };
+		52DC2EB728A2B13400DADFAE /* TimerWorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DC2EB628A2B13300DADFAE /* TimerWorkoutView.swift */; };
+		52DC2EB928A2B14300DADFAE /* RepsWorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DC2EB828A2B14300DADFAE /* RepsWorkoutView.swift */; };
+		52F1D7F728A409CC00CA8986 /* CustomAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F1D7F628A409CC00CA8986 /* CustomAlert.swift */; };
+		52F1D7F928A4FB0200CA8986 /* OkCancelAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F1D7F828A4FB0200CA8986 /* OkCancelAlert.swift */; };
+		52F1D7FB28A50F7900CA8986 /* Ext + Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F1D7FA28A50F7900CA8986 /* Ext + Int.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,6 +76,13 @@
 		52DC2EA928A1167300DADFAE /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 		52DC2EAB28A1271500DADFAE /* Ext + Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext + Date.swift"; sourceTree = "<group>"; };
 		52DC2EAE28A1447300DADFAE /* SimpleAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleAlert.swift; sourceTree = "<group>"; };
+		52DC2EB028A29CC000DADFAE /* RepsWorkoutVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepsWorkoutVC.swift; sourceTree = "<group>"; };
+		52DC2EB228A29CD000DADFAE /* TimerWorkoutVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerWorkoutVC.swift; sourceTree = "<group>"; };
+		52DC2EB628A2B13300DADFAE /* TimerWorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerWorkoutView.swift; sourceTree = "<group>"; };
+		52DC2EB828A2B14300DADFAE /* RepsWorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepsWorkoutView.swift; sourceTree = "<group>"; };
+		52F1D7F628A409CC00CA8986 /* CustomAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlert.swift; sourceTree = "<group>"; };
+		52F1D7F828A4FB0200CA8986 /* OkCancelAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OkCancelAlert.swift; sourceTree = "<group>"; };
+		52F1D7FA28A50F7900CA8986 /* Ext + Int.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext + Int.swift"; sourceTree = "<group>"; };
 		543FEBFF3FB2087CB5F31442 /* Pods-MyXWorkout.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyXWorkout.release.xcconfig"; path = "Target Support Files/Pods-MyXWorkout/Pods-MyXWorkout.release.xcconfig"; sourceTree = "<group>"; };
 		9449CBDCEC23293A7E829241 /* Pods_MyXWorkout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyXWorkout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E8FD0861317A8F6B5B276EE /* Pods-MyXWorkout.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyXWorkout.debug.xcconfig"; path = "Target Support Files/Pods-MyXWorkout/Pods-MyXWorkout.debug.xcconfig"; sourceTree = "<group>"; };
@@ -131,6 +145,8 @@
 				52DC2E9D28A00CDC00DADFAE /* NewWorkoutVC.swift */,
 				52DC2E90289FCDBE00DADFAE /* StatisticVC.swift */,
 				52DC2E9728A0039600DADFAE /* ProfilVC.swift */,
+				52DC2EB028A29CC000DADFAE /* RepsWorkoutVC.swift */,
+				52DC2EB228A29CD000DADFAE /* TimerWorkoutVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -142,6 +158,8 @@
 				52DC2E9F28A00DEF00DADFAE /* NewWorkoutVC */,
 				52DC2E9928A0058900DADFAE /* ProfileVC */,
 				52DC2E92289FCED400DADFAE /* StatisticVC */,
+				52DC2EB428A29E7400DADFAE /* RepsWorkouVC */,
+				52DC2EB528A2B10A00DADFAE /* TimerWorkoutVC */,
 				52DC2E7C289EBA3300DADFAE /* MainVC */,
 			);
 			path = Views;
@@ -172,6 +190,7 @@
 				52DC2E87289FBE8C00DADFAE /* Ext + UIStackView.swift */,
 				52DC2E89289FBEB100DADFAE /* Ext + UILabel.swift */,
 				52DC2EAB28A1271500DADFAE /* Ext + Date.swift */,
+				52F1D7FA28A50F7900CA8986 /* Ext + Int.swift */,
 			);
 			path = "Ext + UIKit";
 			sourceTree = "<group>";
@@ -248,8 +267,26 @@
 			isa = PBXGroup;
 			children = (
 				52DC2EAE28A1447300DADFAE /* SimpleAlert.swift */,
+				52F1D7F628A409CC00CA8986 /* CustomAlert.swift */,
+				52F1D7F828A4FB0200CA8986 /* OkCancelAlert.swift */,
 			);
 			path = Alerts;
+			sourceTree = "<group>";
+		};
+		52DC2EB428A29E7400DADFAE /* RepsWorkouVC */ = {
+			isa = PBXGroup;
+			children = (
+				52DC2EB828A2B14300DADFAE /* RepsWorkoutView.swift */,
+			);
+			path = RepsWorkouVC;
+			sourceTree = "<group>";
+		};
+		52DC2EB528A2B10A00DADFAE /* TimerWorkoutVC */ = {
+			isa = PBXGroup;
+			children = (
+				52DC2EB628A2B13300DADFAE /* TimerWorkoutView.swift */,
+			);
+			path = TimerWorkoutVC;
 			sourceTree = "<group>";
 		};
 		5FC73D4065DFA3F37EA95E41 /* Pods */ = {
@@ -392,6 +429,8 @@
 				52DC2EAA28A1167300DADFAE /* RealmManager.swift in Sources */,
 				52DC2E80289F9A0300DADFAE /* Ext + UIFont.swift in Sources */,
 				52DC2E88289FBE8C00DADFAE /* Ext + UIStackView.swift in Sources */,
+				52DC2EB728A2B13400DADFAE /* TimerWorkoutView.swift in Sources */,
+				52F1D7F728A409CC00CA8986 /* CustomAlert.swift in Sources */,
 				52DC2EAF28A1447300DADFAE /* SimpleAlert.swift in Sources */,
 				52DC2E94289FCEF400DADFAE /* StatisticTVC.swift in Sources */,
 				52DC2E7E289EBA5400DADFAE /* CalendarView.swift in Sources */,
@@ -399,15 +438,20 @@
 				52DC2E5F289E2AE200DADFAE /* AppDelegate.swift in Sources */,
 				52DC2E86289FBE5A00DADFAE /* Ext + UIView.swift in Sources */,
 				52DC2EAC28A1271500DADFAE /* Ext + Date.swift in Sources */,
+				52F1D7FB28A50F7900CA8986 /* Ext + Int.swift in Sources */,
 				52DC2E82289F9DC500DADFAE /* WeatherView.swift in Sources */,
+				52DC2EB128A29CC000DADFAE /* RepsWorkoutVC.swift in Sources */,
 				52DC2E9628A0033F00DADFAE /* MainTabBarController.swift in Sources */,
 				52DC2E91289FCDBE00DADFAE /* StatisticVC.swift in Sources */,
+				52F1D7F928A4FB0200CA8986 /* OkCancelAlert.swift in Sources */,
 				52DC2E61289E2AE200DADFAE /* SceneDelegate.swift in Sources */,
 				52DC2E9C28A005AC00DADFAE /* ProfileCVC.swift in Sources */,
 				52DC2EA728A114AD00DADFAE /* WorkoutModel.swift in Sources */,
 				52DC2E84289FBE2E00DADFAE /* Ext + UIColor.swift in Sources */,
 				52DC2EA528A015DB00DADFAE /* ViewController.swift in Sources */,
 				52DC2E8A289FBEB100DADFAE /* Ext + UILabel.swift in Sources */,
+				52DC2EB928A2B14300DADFAE /* RepsWorkoutView.swift in Sources */,
+				52DC2EB328A29CD000DADFAE /* TimerWorkoutVC.swift in Sources */,
 				52DC2E8F289FC8A400DADFAE /* WorkoutTVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

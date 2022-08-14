@@ -150,17 +150,17 @@ extension MainVC: StartWorkoutProtocol {
     
     func startButtonTapped(model: WorkoutModel) {
         
-//        if model.workoutTimer == 0 {
-//            let startWorkoutViewController = RepsWorkoutViewController()
-//            startWorkoutViewController.modalPresentationStyle = .fullScreen
-//            startWorkoutViewController.workoutModel = model
-//            present(startWorkoutViewController, animated: true)
-//        } else {
-//            let timerWorkoutViewController = TimerWorkoutViewController()
-//            timerWorkoutViewController.modalPresentationStyle = .fullScreen
-//            timerWorkoutViewController.workoutModel = model
-//            present(timerWorkoutViewController, animated: true)
-//        }
+        if model.workoutTimer == 0 {
+            let startWorkoutViewController = RepsWorkoutVC()
+            startWorkoutViewController.modalPresentationStyle = .fullScreen
+            startWorkoutViewController.workoutModel = model
+            present(startWorkoutViewController, animated: true)
+        } else {
+            let timerWorkoutViewController = TimerWorkoutVC()
+            timerWorkoutViewController.modalPresentationStyle = .fullScreen
+            timerWorkoutViewController.workoutModel = model
+            present(timerWorkoutViewController, animated: true)
+        }
     }
 }
 

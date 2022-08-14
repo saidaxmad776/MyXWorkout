@@ -65,6 +65,21 @@ class StatisticTVC: UITableViewCell {
         addSubview(lineView)
     }
     
+    func cellConfigure(differenceWorkout: DifferenceWorkout) {
+        
+        nameLabel.text = differenceWorkout.name
+        beforeLabel.text = "Before: \(differenceWorkout.firstReps)"
+        nowLabel.text = "Now: \(differenceWorkout.lastReps)"
+        
+        let difference = differenceWorkout.lastReps - differenceWorkout.firstReps
+        differenceLabel.text = "\(difference)"
+        
+        switch difference {
+        case ..<0: differenceLabel.textColor = .specialGreen
+        case 1...: differenceLabel.textColor = .specialDarkYellow
+        default: differenceLabel.textColor = .specialGray
+        }
+    }
 
     private func setConstraints() {
         
@@ -86,7 +101,7 @@ class StatisticTVC: UITableViewCell {
         ])
         
         NSLayoutConstraint.activate([
-            lineView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: 0),
+            lineView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: 10),
             lineView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
             lineView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
             lineView.heightAnchor.constraint(equalToConstant: 1)
