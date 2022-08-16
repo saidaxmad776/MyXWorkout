@@ -47,24 +47,24 @@ class RealmManager {
         }
     }
     
-//    func saveUserModel(model: UserModel) {
-//        try! localRealm.write {
-//            localRealm.add(model)
-//        }
-//    }
-//    
-//    func updateUserModel(model: UserModel) {
-//        
-//        let users = localRealm.objects(UserModel.self)
-//        
-//        try! localRealm.write {
-//            users[0].userFirstName = model.userFirstName
-//            users[0].userSecondName = model.userSecondName
-//            users[0].userHeight = model.userHeight
-//            users[0].userWeight = model.userWeight
-//            users[0].userTarget = model.userTarget
-//            users[0].userImage = model.userImage
-//        }
-//    }
+    func saveUserModel(model: UserModel) {
+        try! localRealm.write {
+            localRealm.add(model)
+        }
+    }
+    
+    func updateUserModel(model: UserModel) {
+        
+        let users = localRealm.objects(UserModel.self)
+        
+        try! localRealm.write {
+            users[0].userFirstName = model.userFirstName
+            users[0].userSecondName = model.userSecondName
+            users[0].userHeight = model.userHeight
+            users[0].userWeight = model.userWeight
+            users[0].userTarget = model.userTarget
+            users[0].userImage = model.userImage
+        }
+    }
 }
 

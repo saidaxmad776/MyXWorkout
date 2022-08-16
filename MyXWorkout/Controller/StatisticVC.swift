@@ -217,14 +217,14 @@ extension StatisticVC: UITextFieldDelegate {
 extension StatisticVC: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        differenceArray.count
+        isFiltred ? filtredArray.count : differenceArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: idStatisticTableViewCell,
                                                        for: indexPath) as? StatisticTVC else { return UITableViewCell() }
         
-        let differenceModel = differenceArray[indexPath.row]
+        let differenceModel = isFiltred ? filtredArray[indexPath.row] : differenceArray[indexPath.row]
         cell.cellConfigure(differenceWorkout: differenceModel)
         return cell
     }

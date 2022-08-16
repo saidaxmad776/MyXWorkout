@@ -6,6 +6,13 @@
 //
 
 import UIKit
+import RealmSwift
+
+struct ResultWorkout {
+    let name: String
+    let result: Int
+    let imageData: Data?
+}
 
 class ProfilVC: UIViewController {
 
@@ -68,7 +75,7 @@ class ProfilVC: UIViewController {
     private lazy var  editingButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Editing ", for: .normal)
-        button.titleLabel?.font = .robotoMedium12()
+        button.titleLabel?.font = .robotoBold16()
         button.tintColor = .specialGreen
         button.semanticContentAttribute = .forceRightToLeft
         button.setImage(UIImage(named: "profileEditing"), for: .normal)
@@ -141,6 +148,11 @@ class ProfilVC: UIViewController {
     
     private let idProfileCollectionViewCell = "idProfileCollectionViewCell"
 
+    private let localRealm = try! Realm()
+    private var workoutArray: Results<WorkoutModel>!
+    private var userArray: Results<UserModel>!
+    
+    private var resultWorkout = [ResultWorkout]()
     
     override func viewDidLayoutSubviews() {
         userPhotoImageView.layer.cornerRadius = userPhotoImageView.frame.height / 2
@@ -149,12 +161,16 @@ class ProfilVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-    
+        resultWorkout = [ResultWorkout]()
+        getWorkoutResults()
+        collectionView.reloadData()
+        setupUserParameters()
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        userArray = localRealm.objects(UserModel.self)
         
         setupViews()
         setConstraints()
@@ -195,18 +211,55 @@ class ProfilVC: UIViewController {
     }
     
     @objc private func editingButtonTap() {
-        
+        let settingViewController = SettingVC()
+        settingViewController.modalPresentationStyle = .fullScreen
+        present(settingViewController, animated: true)
     }
 
-  
+    private func getWorkoutsName() -> [String] {
+
+        var nameArray = [String]()
+        workoutArray = localRealm.objects(WorkoutModel.self)
+
+        for workoutModel in workoutArray {
+            if !nameArray.contains(workoutModel.workoutName) {
+                nameArray.append(workoutModel.workoutName)
+            }
+        }
+        return nameArray
+    }
     
     private func getWorkoutResults() {
 
+        let nameArray = getWorkoutsName()
+
+        for name in nameArray {
+            let predicateName = NSPredicate(format: "workoutName = '\(name)'")
+            workoutArray = localRealm.objects(WorkoutModel.self).filter(predicateName).sorted(byKeyPath: "workoutName")
+            var result = 0
+            var image: Data?
+            workoutArray.forEach { model in
+                result += model.workoutReps
+                image = model.workoutImage
+            }
+            let resultModel = ResultWorkout(name: name, result: result, imageData: image)
+            resultWorkout.append(resultModel)
+        }
     }
     
     private func setupUserParameters() {
         
-    
+        if userArray.count != 0 {
+            userNameLabel.text = userArray[0].userFirstName + " " + userArray[0].userSecondName
+            userHeightLabel.text = "Height: \(userArray[0].userHeight)"
+            userWeightLabel.text = "Weight: \(userArray[0].userWeight)"
+            targetLabel.text = "TARGET: \(userArray[0].userTarget)"
+            workoutsTargetLabel.text = "\(userArray[0].userTarget)"
+            
+            guard let data = userArray[0].userImage else { return }
+            guard let image = UIImage(data: data) else { return }
+            userPhotoImageView.image = image
+        }
     }
 }
 
@@ -215,11 +268,14 @@ class ProfilVC: UIViewController {
 extension ProfilVC: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        4
+        resultWorkout.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: idProfileCollectionViewCell, for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: idProfileCollectionViewCell, for: indexPath) as! ProfileCVC
+        let model = resultWorkout[indexPath.row]
+        cell.cellConfigure(model: model)
+        cell.backgroundColor = (indexPath.row % 4 == 0 || indexPath.row % 4 == 3 ? .specialGreen : .specialDarkYellow)
         return cell
     }
 }
@@ -316,3 +372,4 @@ extension ProfilVC {
         ])
     }
 }
+

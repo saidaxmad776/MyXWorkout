@@ -43,6 +43,12 @@
 		52F1D7F728A409CC00CA8986 /* CustomAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F1D7F628A409CC00CA8986 /* CustomAlert.swift */; };
 		52F1D7F928A4FB0200CA8986 /* OkCancelAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F1D7F828A4FB0200CA8986 /* OkCancelAlert.swift */; };
 		52F1D7FB28A50F7900CA8986 /* Ext + Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F1D7FA28A50F7900CA8986 /* Ext + Int.swift */; };
+		52F1D7FD28A8D53C00CA8986 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F1D7FC28A8D53C00CA8986 /* UserModel.swift */; };
+		52F1D7FF28AA3C5C00CA8986 /* SettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F1D7FE28AA3C5C00CA8986 /* SettingVC.swift */; };
+		52F1D80128AA419900CA8986 /* AlertPhotoCamera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F1D80028AA419900CA8986 /* AlertPhotoCamera.swift */; };
+		52F1D80328AA6C2000CA8986 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F1D80228AA6C2000CA8986 /* Notification.swift */; };
+		52F1D80528AB583100CA8986 /* OnbordingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F1D80428AB583100CA8986 /* OnbordingVC.swift */; };
+		52F1D80828AB58F800CA8986 /* OnbordingCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F1D80728AB58F800CA8986 /* OnbordingCVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -83,6 +89,12 @@
 		52F1D7F628A409CC00CA8986 /* CustomAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlert.swift; sourceTree = "<group>"; };
 		52F1D7F828A4FB0200CA8986 /* OkCancelAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OkCancelAlert.swift; sourceTree = "<group>"; };
 		52F1D7FA28A50F7900CA8986 /* Ext + Int.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext + Int.swift"; sourceTree = "<group>"; };
+		52F1D7FC28A8D53C00CA8986 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		52F1D7FE28AA3C5C00CA8986 /* SettingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingVC.swift; sourceTree = "<group>"; };
+		52F1D80028AA419900CA8986 /* AlertPhotoCamera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPhotoCamera.swift; sourceTree = "<group>"; };
+		52F1D80228AA6C2000CA8986 /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
+		52F1D80428AB583100CA8986 /* OnbordingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnbordingVC.swift; sourceTree = "<group>"; };
+		52F1D80728AB58F800CA8986 /* OnbordingCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnbordingCVC.swift; sourceTree = "<group>"; };
 		543FEBFF3FB2087CB5F31442 /* Pods-MyXWorkout.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyXWorkout.release.xcconfig"; path = "Target Support Files/Pods-MyXWorkout/Pods-MyXWorkout.release.xcconfig"; sourceTree = "<group>"; };
 		9449CBDCEC23293A7E829241 /* Pods_MyXWorkout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyXWorkout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E8FD0861317A8F6B5B276EE /* Pods-MyXWorkout.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyXWorkout.debug.xcconfig"; path = "Target Support Files/Pods-MyXWorkout/Pods-MyXWorkout.debug.xcconfig"; sourceTree = "<group>"; };
@@ -123,6 +135,7 @@
 			children = (
 				52DC2E5E289E2AE200DADFAE /* AppDelegate.swift */,
 				52DC2E60289E2AE200DADFAE /* SceneDelegate.swift */,
+				52F1D80228AA6C2000CA8986 /* Notification.swift */,
 				52DC2E77289EA29800DADFAE /* Resorces */,
 				52DC2E74289E2B7000DADFAE /* Model */,
 				52DC2E73289E2B6600DADFAE /* Views */,
@@ -147,6 +160,8 @@
 				52DC2E9728A0039600DADFAE /* ProfilVC.swift */,
 				52DC2EB028A29CC000DADFAE /* RepsWorkoutVC.swift */,
 				52DC2EB228A29CD000DADFAE /* TimerWorkoutVC.swift */,
+				52F1D7FE28AA3C5C00CA8986 /* SettingVC.swift */,
+				52F1D80428AB583100CA8986 /* OnbordingVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -154,6 +169,7 @@
 		52DC2E73289E2B6600DADFAE /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				52F1D80628AB58D300CA8986 /* OnbordingVC */,
 				52DC2EAD28A1444500DADFAE /* Alerts */,
 				52DC2E9F28A00DEF00DADFAE /* NewWorkoutVC */,
 				52DC2E9928A0058900DADFAE /* ProfileVC */,
@@ -169,6 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				52DC2EA628A114AD00DADFAE /* WorkoutModel.swift */,
+				52F1D7FC28A8D53C00CA8986 /* UserModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -269,6 +286,7 @@
 				52DC2EAE28A1447300DADFAE /* SimpleAlert.swift */,
 				52F1D7F628A409CC00CA8986 /* CustomAlert.swift */,
 				52F1D7F828A4FB0200CA8986 /* OkCancelAlert.swift */,
+				52F1D80028AA419900CA8986 /* AlertPhotoCamera.swift */,
 			);
 			path = Alerts;
 			sourceTree = "<group>";
@@ -287,6 +305,14 @@
 				52DC2EB628A2B13300DADFAE /* TimerWorkoutView.swift */,
 			);
 			path = TimerWorkoutVC;
+			sourceTree = "<group>";
+		};
+		52F1D80628AB58D300CA8986 /* OnbordingVC */ = {
+			isa = PBXGroup;
+			children = (
+				52F1D80728AB58F800CA8986 /* OnbordingCVC.swift */,
+			);
+			path = OnbordingVC;
 			sourceTree = "<group>";
 		};
 		5FC73D4065DFA3F37EA95E41 /* Pods */ = {
@@ -428,9 +454,11 @@
 				52DC2E8D289FC3C000DADFAE /* CalendarCVC.swift in Sources */,
 				52DC2EAA28A1167300DADFAE /* RealmManager.swift in Sources */,
 				52DC2E80289F9A0300DADFAE /* Ext + UIFont.swift in Sources */,
+				52F1D80128AA419900CA8986 /* AlertPhotoCamera.swift in Sources */,
 				52DC2E88289FBE8C00DADFAE /* Ext + UIStackView.swift in Sources */,
 				52DC2EB728A2B13400DADFAE /* TimerWorkoutView.swift in Sources */,
 				52F1D7F728A409CC00CA8986 /* CustomAlert.swift in Sources */,
+				52F1D7FD28A8D53C00CA8986 /* UserModel.swift in Sources */,
 				52DC2EAF28A1447300DADFAE /* SimpleAlert.swift in Sources */,
 				52DC2E94289FCEF400DADFAE /* StatisticTVC.swift in Sources */,
 				52DC2E7E289EBA5400DADFAE /* CalendarView.swift in Sources */,
@@ -439,14 +467,18 @@
 				52DC2E86289FBE5A00DADFAE /* Ext + UIView.swift in Sources */,
 				52DC2EAC28A1271500DADFAE /* Ext + Date.swift in Sources */,
 				52F1D7FB28A50F7900CA8986 /* Ext + Int.swift in Sources */,
+				52F1D80328AA6C2000CA8986 /* Notification.swift in Sources */,
 				52DC2E82289F9DC500DADFAE /* WeatherView.swift in Sources */,
 				52DC2EB128A29CC000DADFAE /* RepsWorkoutVC.swift in Sources */,
+				52F1D80828AB58F800CA8986 /* OnbordingCVC.swift in Sources */,
 				52DC2E9628A0033F00DADFAE /* MainTabBarController.swift in Sources */,
 				52DC2E91289FCDBE00DADFAE /* StatisticVC.swift in Sources */,
 				52F1D7F928A4FB0200CA8986 /* OkCancelAlert.swift in Sources */,
 				52DC2E61289E2AE200DADFAE /* SceneDelegate.swift in Sources */,
 				52DC2E9C28A005AC00DADFAE /* ProfileCVC.swift in Sources */,
 				52DC2EA728A114AD00DADFAE /* WorkoutModel.swift in Sources */,
+				52F1D80528AB583100CA8986 /* OnbordingVC.swift in Sources */,
+				52F1D7FF28AA3C5C00CA8986 /* SettingVC.swift in Sources */,
 				52DC2E84289FBE2E00DADFAE /* Ext + UIColor.swift in Sources */,
 				52DC2EA528A015DB00DADFAE /* ViewController.swift in Sources */,
 				52DC2E8A289FBEB100DADFAE /* Ext + UILabel.swift in Sources */,

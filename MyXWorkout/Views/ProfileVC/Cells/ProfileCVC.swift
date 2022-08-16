@@ -58,6 +58,14 @@ class ProfileCVC: UICollectionViewCell {
         addSubview(numberLabel)
     }
     
+    func cellConfigure(model: ResultWorkout) {
+        nameLabel.text = model.name
+        numberLabel.text = "\(model.result)"
+        
+        guard let data = model.imageData else { return }
+        let image = UIImage(data: data)
+        workoutImageView.image = image
+    }
    
     
     private func setConstraints() {
