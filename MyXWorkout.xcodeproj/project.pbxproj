@@ -51,6 +51,8 @@
 		52F1D80828AB58F800CA8986 /* OnbordingCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F1D80728AB58F800CA8986 /* OnbordingCVC.swift */; };
 		52F1D80B28AB61CC00CA8986 /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F1D80A28AB61CC00CA8986 /* NetworkRequest.swift */; };
 		52F1D80D28AB633300CA8986 /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F1D80C28AB633200CA8986 /* WeatherModel.swift */; };
+		52F1D80F28AB64F800CA8986 /* NetworkDataFetch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F1D80E28AB64F800CA8986 /* NetworkDataFetch.swift */; };
+		52F1D81128AB685A00CA8986 /* NetworkImageRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F1D81028AB685A00CA8986 /* NetworkImageRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -99,6 +101,8 @@
 		52F1D80728AB58F800CA8986 /* OnbordingCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnbordingCVC.swift; sourceTree = "<group>"; };
 		52F1D80A28AB61CC00CA8986 /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
 		52F1D80C28AB633200CA8986 /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
+		52F1D80E28AB64F800CA8986 /* NetworkDataFetch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataFetch.swift; sourceTree = "<group>"; };
+		52F1D81028AB685A00CA8986 /* NetworkImageRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkImageRequest.swift; sourceTree = "<group>"; };
 		543FEBFF3FB2087CB5F31442 /* Pods-MyXWorkout.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyXWorkout.release.xcconfig"; path = "Target Support Files/Pods-MyXWorkout/Pods-MyXWorkout.release.xcconfig"; sourceTree = "<group>"; };
 		9449CBDCEC23293A7E829241 /* Pods_MyXWorkout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyXWorkout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E8FD0861317A8F6B5B276EE /* Pods-MyXWorkout.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyXWorkout.debug.xcconfig"; path = "Target Support Files/Pods-MyXWorkout/Pods-MyXWorkout.debug.xcconfig"; sourceTree = "<group>"; };
@@ -325,6 +329,8 @@
 			isa = PBXGroup;
 			children = (
 				52F1D80A28AB61CC00CA8986 /* NetworkRequest.swift */,
+				52F1D80E28AB64F800CA8986 /* NetworkDataFetch.swift */,
+				52F1D81028AB685A00CA8986 /* NetworkImageRequest.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -487,6 +493,7 @@
 				52DC2E82289F9DC500DADFAE /* WeatherView.swift in Sources */,
 				52DC2EB128A29CC000DADFAE /* RepsWorkoutVC.swift in Sources */,
 				52F1D80828AB58F800CA8986 /* OnbordingCVC.swift in Sources */,
+				52F1D81128AB685A00CA8986 /* NetworkImageRequest.swift in Sources */,
 				52DC2E9628A0033F00DADFAE /* MainTabBarController.swift in Sources */,
 				52DC2E91289FCDBE00DADFAE /* StatisticVC.swift in Sources */,
 				52F1D7F928A4FB0200CA8986 /* OkCancelAlert.swift in Sources */,
@@ -497,6 +504,7 @@
 				52F1D7FF28AA3C5C00CA8986 /* SettingVC.swift in Sources */,
 				52DC2E84289FBE2E00DADFAE /* Ext + UIColor.swift in Sources */,
 				52DC2EA528A015DB00DADFAE /* ViewController.swift in Sources */,
+				52F1D80F28AB64F800CA8986 /* NetworkDataFetch.swift in Sources */,
 				52DC2E8A289FBEB100DADFAE /* Ext + UILabel.swift in Sources */,
 				52DC2EB928A2B14300DADFAE /* RepsWorkoutView.swift in Sources */,
 				52DC2EB328A29CD000DADFAE /* TimerWorkoutVC.swift in Sources */,

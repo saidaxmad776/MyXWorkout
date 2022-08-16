@@ -18,7 +18,7 @@ class WeatherView: UIView {
     
     private let weatherStatusLabel: UILabel = {
         let label = UILabel()
-        label.text = "Солнечно"
+//        label.text = "Солнечно"
         label.adjustsFontSizeToFitWidth = true
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -26,7 +26,7 @@ class WeatherView: UIView {
     
     private let weatherDiscriptionLabel: UILabel = {
         let label = UILabel()
-        label.text = "Хорошая погода, чтобы позаниматься на улице"
+//        label.text = "Хорошая погода, чтобы позаниматься на улице"
         label.adjustsFontSizeToFitWidth = true
         label.numberOfLines = 2
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -53,6 +53,30 @@ class WeatherView: UIView {
         addSubview(weatherIconImageView)
         addSubview(weatherStatusLabel)
         addSubview(weatherDiscriptionLabel)
+    }
+    
+    private func updateLabel(model: WeatherModel) {
+        weatherStatusLabel.text = model.weather[0].myDescription + " \(model.main.temperatureCelsius)°C"
+        
+        switch model.weather[0].weatherDescription {
+        case "clear sky":
+            weatherDiscriptionLabel.text = "Лучше остаться дома и провести домашнюю тренировку"
+        default :
+            weatherDiscriptionLabel.text = "No data"
+        }
+    }
+    
+    private func updateImage(data: Data) {
+        guard let image = UIImage(data: data) else { return }
+        weatherIconImageView.image = image
+    }
+    
+    public func setWeather(model: WeatherModel) {
+        updateLabel(model: model)
+    }
+    
+    public func setImage(data: Data) {
+        updateImage(data: data)
     }
 }
 
