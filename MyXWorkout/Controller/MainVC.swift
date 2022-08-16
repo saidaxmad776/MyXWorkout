@@ -93,7 +93,11 @@ class MainVC: ViewController {
         tableView.reloadData()
         setupUserParameters()
     }
-
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        showOnboarding()
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -157,6 +161,16 @@ class MainVC: ViewController {
             guard let data = userArray[0].userImage else { return }
             guard let image = UIImage(data: data) else { return }
             userPhotoImageView.image = image
+        }
+    }
+    
+    private func showOnboarding() {
+        let userDefaults = UserDefaults.standard
+        let onBoardingWasViewed = userDefaults.bool(forKey: "OnBoardingWasViewed")
+        if onBoardingWasViewed == false {
+            let onboardingViewController = OnbordingVC()
+            onboardingViewController.modalPresentationStyle = .fullScreen
+            present(onboardingViewController, animated: false)
         }
     }
 }

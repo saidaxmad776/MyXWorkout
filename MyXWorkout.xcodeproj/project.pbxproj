@@ -49,6 +49,8 @@
 		52F1D80328AA6C2000CA8986 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F1D80228AA6C2000CA8986 /* Notification.swift */; };
 		52F1D80528AB583100CA8986 /* OnbordingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F1D80428AB583100CA8986 /* OnbordingVC.swift */; };
 		52F1D80828AB58F800CA8986 /* OnbordingCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F1D80728AB58F800CA8986 /* OnbordingCVC.swift */; };
+		52F1D80B28AB61CC00CA8986 /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F1D80A28AB61CC00CA8986 /* NetworkRequest.swift */; };
+		52F1D80D28AB633300CA8986 /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F1D80C28AB633200CA8986 /* WeatherModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -95,6 +97,8 @@
 		52F1D80228AA6C2000CA8986 /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 		52F1D80428AB583100CA8986 /* OnbordingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnbordingVC.swift; sourceTree = "<group>"; };
 		52F1D80728AB58F800CA8986 /* OnbordingCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnbordingCVC.swift; sourceTree = "<group>"; };
+		52F1D80A28AB61CC00CA8986 /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
+		52F1D80C28AB633200CA8986 /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
 		543FEBFF3FB2087CB5F31442 /* Pods-MyXWorkout.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyXWorkout.release.xcconfig"; path = "Target Support Files/Pods-MyXWorkout/Pods-MyXWorkout.release.xcconfig"; sourceTree = "<group>"; };
 		9449CBDCEC23293A7E829241 /* Pods_MyXWorkout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyXWorkout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E8FD0861317A8F6B5B276EE /* Pods-MyXWorkout.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyXWorkout.debug.xcconfig"; path = "Target Support Files/Pods-MyXWorkout/Pods-MyXWorkout.debug.xcconfig"; sourceTree = "<group>"; };
@@ -141,6 +145,7 @@
 				52DC2E73289E2B6600DADFAE /* Views */,
 				52DC2E72289E2B5D00DADFAE /* Controller */,
 				52DC2EA828A1165000DADFAE /* Services */,
+				52F1D80928AB61AC00CA8986 /* Network */,
 				52DC2E67289E2AE300DADFAE /* Assets.xcassets */,
 				52DC2E69289E2AE300DADFAE /* LaunchScreen.storyboard */,
 				52DC2E64289E2AE200DADFAE /* Main.storyboard */,
@@ -186,6 +191,7 @@
 			children = (
 				52DC2EA628A114AD00DADFAE /* WorkoutModel.swift */,
 				52F1D7FC28A8D53C00CA8986 /* UserModel.swift */,
+				52F1D80C28AB633200CA8986 /* WeatherModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -313,6 +319,14 @@
 				52F1D80728AB58F800CA8986 /* OnbordingCVC.swift */,
 			);
 			path = OnbordingVC;
+			sourceTree = "<group>";
+		};
+		52F1D80928AB61AC00CA8986 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				52F1D80A28AB61CC00CA8986 /* NetworkRequest.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		5FC73D4065DFA3F37EA95E41 /* Pods */ = {
@@ -460,6 +474,8 @@
 				52F1D7F728A409CC00CA8986 /* CustomAlert.swift in Sources */,
 				52F1D7FD28A8D53C00CA8986 /* UserModel.swift in Sources */,
 				52DC2EAF28A1447300DADFAE /* SimpleAlert.swift in Sources */,
+				52F1D80B28AB61CC00CA8986 /* NetworkRequest.swift in Sources */,
+				52F1D80D28AB633300CA8986 /* WeatherModel.swift in Sources */,
 				52DC2E94289FCEF400DADFAE /* StatisticTVC.swift in Sources */,
 				52DC2E7E289EBA5400DADFAE /* CalendarView.swift in Sources */,
 				52DC2E9E28A00CDD00DADFAE /* NewWorkoutVC.swift in Sources */,
