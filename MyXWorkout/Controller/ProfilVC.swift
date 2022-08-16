@@ -16,11 +16,19 @@ struct ResultWorkout {
 
 class ProfilVC: UIViewController {
 
+    private let trainImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = UIImage(named: "profileImage")
+        imageView.contentMode = .scaleAspectFill
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        return imageView
+    }()
+    
     private let profileLabel: UILabel = {
        let label = UILabel()
         label.text = "PROFILE"
-        label.font = .robotoMedium24()
-        label.textColor = .specialGray
+        label.font = .robotoBold24()
+        label.textColor = .specialLogo
         label.textAlignment = .center
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -58,7 +66,7 @@ class ProfilVC: UIViewController {
         let label = UILabel()
         label.text = "Height: _"
         label.font = .robotoBold16()
-        label.textColor = .specialGray
+        label.textColor = .specialLightBrown
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -67,7 +75,7 @@ class ProfilVC: UIViewController {
         let label = UILabel()
         label.text = "Weight: _"
         label.font = .robotoBold16()
-        label.textColor = .specialGray
+        label.textColor = .specialLightBrown
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -75,8 +83,8 @@ class ProfilVC: UIViewController {
     private lazy var  editingButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Editing ", for: .normal)
-        button.titleLabel?.font = .robotoBold16()
-        button.tintColor = .specialGreen
+        button.titleLabel?.font = .robotoMedium16()
+        button.tintColor = .specialLightBrown
         button.semanticContentAttribute = .forceRightToLeft
         button.setImage(UIImage(named: "profileEditing"), for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -99,7 +107,7 @@ class ProfilVC: UIViewController {
        let label = UILabel()
         label.text = "TARGET: 0 workouts"
         label.font = .robotoBold16()
-        label.textColor = .specialGray
+        label.textColor = .specialLightBrown
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -108,7 +116,7 @@ class ProfilVC: UIViewController {
        let label = UILabel()
         label.text = "0"
         label.font = .robotoBold24()
-        label.textColor = .specialGray
+        label.textColor = .specialLightBrown
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -117,7 +125,7 @@ class ProfilVC: UIViewController {
        let label = UILabel()
         label.text = "0"
         label.font = .robotoBold24()
-        label.textColor = .specialGray
+        label.textColor = .specialLightBrown
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -125,14 +133,14 @@ class ProfilVC: UIViewController {
     private let targetView: UIView = {
         let view = UIView()
         view.layer.cornerRadius = 15
-        view.backgroundColor = .specialBrown
+        view.backgroundColor = .textFieldColor
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
     
     private let progressView: UIProgressView = {
         let progressView = UIProgressView(progressViewStyle: .default)
-        progressView.trackTintColor = .specialBrown
+        progressView.trackTintColor = .textFieldColor
         progressView.progressTintColor = .specialGreen
         progressView.layer.cornerRadius = 14
         progressView.clipsToBounds = true
@@ -179,7 +187,7 @@ class ProfilVC: UIViewController {
     
     private func setupViews() {
         
-        view.backgroundColor = .specialBackground
+        view.addSubview(trainImageView)
         
         view.addSubview(profileLabel)
         view.addSubview(userPhotoView)
@@ -304,6 +312,11 @@ extension ProfilVC {
     private func setConstraints() {
         
         NSLayoutConstraint.activate([
+            trainImageView.topAnchor.constraint(equalTo: view.topAnchor, constant: 0),
+            trainImageView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0),
+            trainImageView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0),
+            trainImageView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0),
+            
             profileLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 10),
             profileLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor)
         ])

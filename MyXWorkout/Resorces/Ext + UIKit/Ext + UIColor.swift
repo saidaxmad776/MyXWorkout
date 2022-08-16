@@ -8,15 +8,17 @@
 import UIKit
 
 extension UIColor {
-    static let specialBackground = #colorLiteral(red: 0.9411764706, green: 0.9294117647, blue: 0.8862745098, alpha: 1)
-    static let specialGray = #colorLiteral(red: 0.3176470588, green: 0.3176470588, blue: 0.3137254902, alpha: 1)
-    static let specialGreen = #colorLiteral(red: 0.2, green: 0.5529411765, blue: 0.4901960784, alpha: 1)
-    static let specialDarkGreen = #colorLiteral(red: 0.1411764706, green: 0.2941176471, blue: 0.262745098, alpha: 1)
-    static let specialYellow = #colorLiteral(red: 0.9921568627, green: 0.8392156863, blue: 0.3568627451, alpha: 1)
-    static let specialLightBrown = #colorLiteral(red: 0.7098039216, green: 0.6901960784, blue: 0.6196078431, alpha: 1)
-    static let specialBrown = #colorLiteral(red: 0.9019607843, green: 0.8823529412, blue: 0.8196078431, alpha: 1)
+    static let specialBackground = #colorLiteral(red: 0.9607843137, green: 0.9607843137, blue: 0.9607843137, alpha: 1)
+    static let specialGray = #colorLiteral(red: 0, green: 0.2532333434, blue: 0.4309501052, alpha: 1)
+    static let specialGreen = #colorLiteral(red: 0.1114498153, green: 0.3686206043, blue: 0.7859765887, alpha: 1)
+    static let specialDarkGreen = #colorLiteral(red: 1, green: 0, blue: 0, alpha: 1)
+    static let specialYellow = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+    static let specialLightBrown = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+    static let specialBrown = #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1)
     static let specialBlack = #colorLiteral(red: 0.2156862745, green: 0.2156862745, blue: 0.2156862745, alpha: 1)
     static let specialTabBar = #colorLiteral(red: 0.8039215686, green: 0.7803921569, blue: 0.7019607843, alpha: 1)
-    static let specialLine = #colorLiteral(red: 0.768627451, green: 0.768627451, blue: 0.768627451, alpha: 1)
-    static let specialDarkYellow = #colorLiteral(red: 0.9215686275, green: 0.7058823529, blue: 0.02352941176, alpha: 1)
+    static let specialLine = #colorLiteral(red: 0, green: 0.9116409421, blue: 0.8903127313, alpha: 1)
+    static let specialDarkYellow = #colorLiteral(red: 0.1411764771, green: 0.3960784376, blue: 0.5647059083, alpha: 1)
+    static let specialLogo = #colorLiteral(red: 0, green: 0.9116409421, blue: 0.8903127313, alpha: 1)
+    static let textFieldColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
 }

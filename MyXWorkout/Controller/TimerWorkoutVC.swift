@@ -9,11 +9,19 @@ import UIKit
 
 class TimerWorkoutVC: UIViewController {
     
+    private let statisticImage: UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = UIImage(named: "statisticImage")
+        imageView.contentMode = .scaleAspectFill
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        return imageView
+    }()
+    
     private let newWorkoutLabel: UILabel = {
        let label = UILabel()
         label.text = "START WORKOUT"
         label.font = .robotoMedium24()
-        label.textColor = .specialGray
+        label.textColor = .specialLogo
         label.textAlignment = .center
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -68,7 +76,6 @@ class TimerWorkoutVC: UIViewController {
     private var numberOfSet = 0
     private var shapeLayer = CAShapeLayer()
     private var timer = Timer()
-    
 
     override func viewDidLayoutSubviews() {
         closeButton.layer.cornerRadius = closeButton.frame.height / 2
@@ -86,11 +93,11 @@ class TimerWorkoutVC: UIViewController {
     }
     
     private func setDelegates() {
-        
+        timerWorkoutParametersView.cellNextSetTimerDelegate = self
     }
     
     private func setupViews() {
-        view.backgroundColor = .specialBackground
+        view.addSubview(statisticImage)
         
         view.addSubview(newWorkoutLabel)
         view.addSubview(closeButton)
@@ -107,7 +114,6 @@ class TimerWorkoutVC: UIViewController {
     }
     
     @objc private func finishButtonTapped() {
-     
         if numberOfSet == workoutModel.workoutSets {
             dismiss(animated: true)
             RealmManager.shared.updateStatusWorkoutModel(model: workoutModel)
@@ -143,8 +149,8 @@ class TimerWorkoutVC: UIViewController {
     }
     
     @objc private func timerAction() {
-        
         durationTimer -= 1
+        print(durationTimer)
         
         if durationTimer == 0 {
             timer.invalidate()
@@ -162,7 +168,6 @@ class TimerWorkoutVC: UIViewController {
     }
     
     private func setWorkoutParameters() {
-        
         timerWorkoutParametersView.workoutNameLabel.text = workoutModel.workoutName
         timerWorkoutParametersView.numberOfSetsLabel.text = "\(numberOfSet)/\(workoutModel.workoutSets)"
         
@@ -206,6 +211,7 @@ extension TimerWorkoutVC: NextSetTimerProtocol {
     }
 }
 
+
 extension TimerWorkoutVC {
     
     private func animationCircular() {
@@ -246,6 +252,11 @@ extension TimerWorkoutVC {
     private func setConstraints() {
   
         NSLayoutConstraint.activate([
+            statisticImage.topAnchor.constraint(equalTo: view.topAnchor, constant: 0),
+            statisticImage.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0),
+            statisticImage.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0),
+            statisticImage.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0),
+            
             newWorkoutLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 10),
             newWorkoutLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor)
         ])

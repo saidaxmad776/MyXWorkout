@@ -53,6 +53,8 @@
 		52F1D80D28AB633300CA8986 /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F1D80C28AB633200CA8986 /* WeatherModel.swift */; };
 		52F1D80F28AB64F800CA8986 /* NetworkDataFetch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F1D80E28AB64F800CA8986 /* NetworkDataFetch.swift */; };
 		52F1D81128AB685A00CA8986 /* NetworkImageRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F1D81028AB685A00CA8986 /* NetworkImageRequest.swift */; };
+		52F1D81328AB7B4600CA8986 /* MoreVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F1D81228AB7B4600CA8986 /* MoreVC.swift */; };
+		52F1D81628AB7C5800CA8986 /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F1D81528AB7C5800CA8986 /* CustomTabBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -103,6 +105,8 @@
 		52F1D80C28AB633200CA8986 /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
 		52F1D80E28AB64F800CA8986 /* NetworkDataFetch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataFetch.swift; sourceTree = "<group>"; };
 		52F1D81028AB685A00CA8986 /* NetworkImageRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkImageRequest.swift; sourceTree = "<group>"; };
+		52F1D81228AB7B4600CA8986 /* MoreVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreVC.swift; sourceTree = "<group>"; };
+		52F1D81528AB7C5800CA8986 /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
 		543FEBFF3FB2087CB5F31442 /* Pods-MyXWorkout.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyXWorkout.release.xcconfig"; path = "Target Support Files/Pods-MyXWorkout/Pods-MyXWorkout.release.xcconfig"; sourceTree = "<group>"; };
 		9449CBDCEC23293A7E829241 /* Pods_MyXWorkout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyXWorkout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E8FD0861317A8F6B5B276EE /* Pods-MyXWorkout.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyXWorkout.debug.xcconfig"; path = "Target Support Files/Pods-MyXWorkout/Pods-MyXWorkout.debug.xcconfig"; sourceTree = "<group>"; };
@@ -163,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				52DC2E9528A0033F00DADFAE /* MainTabBarController.swift */,
+				52F1D81228AB7B4600CA8986 /* MoreVC.swift */,
 				52DC2E75289E2B9E00DADFAE /* MainVC.swift */,
 				52DC2E9D28A00CDC00DADFAE /* NewWorkoutVC.swift */,
 				52DC2E90289FCDBE00DADFAE /* StatisticVC.swift */,
@@ -178,6 +183,7 @@
 		52DC2E73289E2B6600DADFAE /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				52F1D81428AB7C3D00CA8986 /* TabBarCustomView */,
 				52F1D80628AB58D300CA8986 /* OnbordingVC */,
 				52DC2EAD28A1444500DADFAE /* Alerts */,
 				52DC2E9F28A00DEF00DADFAE /* NewWorkoutVC */,
@@ -335,6 +341,14 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
+		52F1D81428AB7C3D00CA8986 /* TabBarCustomView */ = {
+			isa = PBXGroup;
+			children = (
+				52F1D81528AB7C5800CA8986 /* CustomTabBar.swift */,
+			);
+			path = TabBarCustomView;
+			sourceTree = "<group>";
+		};
 		5FC73D4065DFA3F37EA95E41 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -488,6 +502,7 @@
 				52DC2E5F289E2AE200DADFAE /* AppDelegate.swift in Sources */,
 				52DC2E86289FBE5A00DADFAE /* Ext + UIView.swift in Sources */,
 				52DC2EAC28A1271500DADFAE /* Ext + Date.swift in Sources */,
+				52F1D81328AB7B4600CA8986 /* MoreVC.swift in Sources */,
 				52F1D7FB28A50F7900CA8986 /* Ext + Int.swift in Sources */,
 				52F1D80328AA6C2000CA8986 /* Notification.swift in Sources */,
 				52DC2E82289F9DC500DADFAE /* WeatherView.swift in Sources */,
@@ -502,6 +517,7 @@
 				52DC2EA728A114AD00DADFAE /* WorkoutModel.swift in Sources */,
 				52F1D80528AB583100CA8986 /* OnbordingVC.swift in Sources */,
 				52F1D7FF28AA3C5C00CA8986 /* SettingVC.swift in Sources */,
+				52F1D81628AB7C5800CA8986 /* CustomTabBar.swift in Sources */,
 				52DC2E84289FBE2E00DADFAE /* Ext + UIColor.swift in Sources */,
 				52DC2EA528A015DB00DADFAE /* ViewController.swift in Sources */,
 				52F1D80F28AB64F800CA8986 /* NetworkDataFetch.swift in Sources */,

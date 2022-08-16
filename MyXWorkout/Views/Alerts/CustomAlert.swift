@@ -18,7 +18,7 @@ class CustomAlert {
     
     private let alertView: UIView = {
        let view = UIView()
-        view.backgroundColor = .specialBackground
+        view.backgroundColor = #colorLiteral(red: 0, green: 0.801379025, blue: 0.9682478309, alpha: 1)
         view.layer.cornerRadius = 20
         return view
     }()

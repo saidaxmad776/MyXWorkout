@@ -10,11 +10,19 @@ import RealmSwift
 
 class SettingVC: UIViewController {
     
+    private let moreImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = UIImage(named: "moreImage")
+        imageView.contentMode = .scaleAspectFill
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        return imageView
+    }()
+    
     private let editingProfileLabel: UILabel = {
        let label = UILabel()
         label.text = "EDITING PROFILE"
-        label.font = .robotoMedium24()
-        label.textColor = .specialGray
+        label.font = .robotoBold24()
+        label.textColor = .specialLogo
         label.textAlignment = .center
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -22,7 +30,7 @@ class SettingVC: UIViewController {
     
     private lazy var  closeButton: UIButton = {
         let button = UIButton(type: .system)
-        button.setBackgroundImage(UIImage(named: "closeButton"), for: .normal)
+        button.setBackgroundImage(UIImage(systemName: "clear.fill"), for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.addTarget(self, action: #selector(closeButtonTapped), for: .touchUpInside)
         return button
@@ -52,10 +60,10 @@ class SettingVC: UIViewController {
     
     private let firstNameTextField: UITextField = {
         let textField = UITextField()
-        textField.backgroundColor = .specialBrown
+        textField.backgroundColor = .textFieldColor
+        textField.textColor = .specialGray
         textField.borderStyle = .none
         textField.layer.cornerRadius = 10
-        textField.textColor = .specialGray
         textField.font = .robotoBold20()
         textField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 15, height: textField.frame.height))
         textField.leftViewMode = .always
@@ -69,10 +77,10 @@ class SettingVC: UIViewController {
     
     private let secondNameTextField: UITextField = {
         let textField = UITextField()
-        textField.backgroundColor = .specialBrown
+        textField.backgroundColor = .textFieldColor
+        textField.textColor = .specialGray
         textField.borderStyle = .none
         textField.layer.cornerRadius = 10
-        textField.textColor = .specialGray
         textField.font = .robotoBold20()
         textField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 15, height: textField.frame.height))
         textField.leftViewMode = .always
@@ -86,10 +94,10 @@ class SettingVC: UIViewController {
     
     private let heightTextField: UITextField = {
         let textField = UITextField()
-        textField.backgroundColor = .specialBrown
+        textField.backgroundColor = .textFieldColor
+        textField.textColor = .specialGray
         textField.borderStyle = .none
         textField.layer.cornerRadius = 10
-        textField.textColor = .specialGray
         textField.font = .robotoBold20()
         textField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 15, height: textField.frame.height))
         textField.leftViewMode = .always
@@ -104,10 +112,10 @@ class SettingVC: UIViewController {
     
     private let weightTextField: UITextField = {
         let textField = UITextField()
-        textField.backgroundColor = .specialBrown
+        textField.backgroundColor = .textFieldColor
+        textField.textColor = .specialGray
         textField.borderStyle = .none
         textField.layer.cornerRadius = 10
-        textField.textColor = .specialGray
         textField.font = .robotoBold20()
         textField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 15, height: textField.frame.height))
         textField.leftViewMode = .always
@@ -122,10 +130,10 @@ class SettingVC: UIViewController {
     
     private let targetTextField: UITextField = {
         let textField = UITextField()
-        textField.backgroundColor = .specialBrown
+        textField.backgroundColor = .textFieldColor
+        textField.textColor = .specialGray
         textField.borderStyle = .none
         textField.layer.cornerRadius = 10
-        textField.textColor = .specialGray
         textField.font = .robotoBold20()
         textField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 15, height: textField.frame.height))
         textField.leftViewMode = .always
@@ -177,7 +185,7 @@ class SettingVC: UIViewController {
     
     private func setupViews() {
         
-        view.backgroundColor = .specialBackground
+        view.addSubview(moreImageView)
         
         view.addSubview(editingProfileLabel)
         view.addSubview(closeButton)
@@ -314,6 +322,11 @@ extension SettingVC {
     private func setConstraints() {
         
         NSLayoutConstraint.activate([
+            moreImageView.topAnchor.constraint(equalTo: view.topAnchor, constant: 0),
+            moreImageView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0),
+            moreImageView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0),
+            moreImageView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0),
+            
             editingProfileLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 10),
             editingProfileLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor)
         ])
@@ -321,8 +334,8 @@ extension SettingVC {
         NSLayoutConstraint.activate([
             closeButton.centerYAnchor.constraint(equalTo: editingProfileLabel.centerYAnchor),
             closeButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
-            closeButton.heightAnchor.constraint(equalToConstant: 30),
-            closeButton.widthAnchor.constraint(equalToConstant: 30)
+            closeButton.heightAnchor.constraint(equalToConstant: 40),
+            closeButton.widthAnchor.constraint(equalToConstant: 40)
         ])
         
         NSLayoutConstraint.activate([

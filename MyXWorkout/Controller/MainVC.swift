@@ -5,26 +5,25 @@
 //  Created by Test on 06/08/22.
 //
 
-import UIKit
+import Spring
 import RealmSwift
 
 class MainVC: ViewController {
     
     private let trainImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = UIImage(named: "trainView")
+        imageView.image = UIImage(named: "profileImage")
         imageView.contentMode = .scaleAspectFill
-        imageView.alpha = 0.7
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
     
     private let userPhotoImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        imageView.backgroundColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
         imageView.layer.borderWidth = 7
         imageView.clipsToBounds = true
-        imageView.layer.borderColor = UIColor.red.cgColor
+        imageView.layer.borderColor = UIColor.specialGreen.cgColor
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
@@ -32,18 +31,20 @@ class MainVC: ViewController {
     private let userNameLabel: UILabel = {
         let label = UILabel()
         label.text = "Your name"
-        label.font = .robotoMedium16()
+        label.font = .robotoBold16()
+        label.textColor = .specialLogo
         label.adjustsFontSizeToFitWidth = true
         label.minimumScaleFactor = 0.5
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
-    private lazy var addWorkoutButton: UIButton = {
-        let button = UIButton(type: .system)
-        button.backgroundColor = .green
+    private lazy var addWorkoutButton: SpringButton = {
+        let button = SpringButton(type: .system)
+        button.backgroundColor = #colorLiteral(red: 0.03616834432, green: 0.1729254425, blue: 0.3168723285, alpha: 1)
         button.layer.cornerRadius = 10
         button.setImage(UIImage(named: "addWorkout"), for: .normal)
+        button.tintColor = .white
         button.translatesAutoresizingMaskIntoConstraints = false
         button.addTarget(self, action: #selector(addWorkoutButtonTapped), for: .touchUpInside)
         button.addShadowOnView()
@@ -88,6 +89,13 @@ class MainVC: ViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        addWorkoutButton.animation = "zoomIn"
+        addWorkoutButton.curve = "linear"
+        addWorkoutButton.force = 1
+        addWorkoutButton.duration = 1
+        addWorkoutButton.delay = 0.5
+        addWorkoutButton.animate()
         
         getWorkouts(date: Date())
         tableView.reloadData()

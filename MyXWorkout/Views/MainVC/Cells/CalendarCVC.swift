@@ -12,6 +12,7 @@ class CalendarCVC: UICollectionViewCell {
     let dayOfWeekLabel: UILabel = {
        let label = UILabel()
         label.text = "We"
+        label.font = .robotoBold16()
         label.textColor = .white
         label.textAlignment = .center
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -21,6 +22,7 @@ class CalendarCVC: UICollectionViewCell {
     let numberOfDayLabel: UILabel = {
        let label = UILabel()
         label.text = "07"
+        label.font = .robotoBold16()
         label.textColor = .white
         label.textAlignment = .center
         label.translatesAutoresizingMaskIntoConstraints = false

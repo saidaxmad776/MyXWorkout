@@ -15,12 +15,20 @@ struct DifferenceWorkout {
 }
 
 class StatisticVC: UIViewController {
+    
+    private let statisticImage: UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = UIImage(named: "statisticImage")
+        imageView.contentMode = .scaleAspectFill
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        return imageView
+    }()
 
     private let statisticLabel: UILabel = {
        let label = UILabel()
         label.text = "STATISTIC"
-        label.font = .robotoMedium24()
-        label.textColor = .specialGray
+        label.font = .robotoBold24()
+        label.textColor = .specialLogo
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -44,8 +52,9 @@ class StatisticVC: UIViewController {
     
     private let nameTextField: UITextField = {
        let textField = UITextField()
-        textField.backgroundColor = .specialBrown
+        textField.backgroundColor = .textFieldColor
         textField.borderStyle = .none
+        textField.placeholder = "Search"
         textField.layer.cornerRadius = 10
         textField.textColor = .specialGray
         textField.font = .robotoBold20()
@@ -103,6 +112,7 @@ class StatisticVC: UIViewController {
         
         view.backgroundColor = .specialBackground
         
+        view.addSubview(statisticImage)
         view.addSubview(statisticLabel)
         view.addSubview(segmentedControl)
         view.addSubview(nameTextField)
@@ -246,6 +256,11 @@ extension StatisticVC {
     private func setConstraints() {
         
         NSLayoutConstraint.activate([
+            statisticImage.topAnchor.constraint(equalTo: view.topAnchor, constant: 0),
+            statisticImage.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0),
+            statisticImage.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0),
+            statisticImage.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0),
+            
             statisticLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 10),
             statisticLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             

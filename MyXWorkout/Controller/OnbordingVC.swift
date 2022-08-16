@@ -5,7 +5,8 @@
 //  Created by Test on 16/08/22.
 //
 
-import UIKit
+import Spring
+
 
 struct OnboardingStruct {
     let topLabel: String
@@ -15,8 +16,8 @@ struct OnboardingStruct {
 
 class OnbordingVC: UIViewController {
  
-    private lazy var  nextButton: UIButton = {
-        let button = UIButton(type: .system)
+    private lazy var  nextButton: SpringButton = {
+        let button = SpringButton(type: .system)
         button.backgroundColor = .white
         button.layer.cornerRadius = 25
         button.setTitle("NEXT", for: .normal)
@@ -53,6 +54,12 @@ class OnbordingVC: UIViewController {
     private var onboardingArray = [OnboardingStruct]()
     
     private var collectionItem = 0
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        animationButton()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -108,6 +115,18 @@ class OnbordingVC: UIViewController {
             collectionView.scrollToItem(at: index, at: .centeredHorizontally, animated: true)
             pageControl.currentPage = collectionItem
         }
+        
+        animationButton()
+    }
+    
+    private func animationButton() {
+        
+        nextButton.animation = "slideDown"
+        nextButton.curve = "easeIn"
+        nextButton.force = 2
+        nextButton.duration = 1
+        nextButton.delay = 0.3
+        nextButton.animate()
     }
     
     private func saveUserDefaults() {

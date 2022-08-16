@@ -9,11 +9,19 @@ import UIKit
 
 class RepsWorkoutVC: UIViewController {
     
+    private let statisticImage: UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = UIImage(named: "statisticImage")
+        imageView.contentMode = .scaleAspectFill
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        return imageView
+    }()
+    
     private let newWorkoutLabel: UILabel = {
        let label = UILabel()
         label.text = "START WORKOUT"
-        label.font = .robotoMedium24()
-        label.textColor = .specialGray
+        label.font = .robotoBold24()
+        label.textColor = .specialLogo
         label.textAlignment = .center
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -21,7 +29,7 @@ class RepsWorkoutVC: UIViewController {
     
     private lazy var  closeButton: UIButton = {
         let button = UIButton(type: .system)
-        button.setBackgroundImage(UIImage(named: "closeButton"), for: .normal)
+        button.setBackgroundImage(UIImage(systemName: "clear.fill"), for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.addTarget(self, action: #selector(closeButtonTapped), for: .touchUpInside)
         return button
@@ -72,8 +80,7 @@ class RepsWorkoutVC: UIViewController {
    
     
     private func setupViews() {
-        view.backgroundColor = .specialBackground
-        
+        view.addSubview(statisticImage)
         view.addSubview(newWorkoutLabel)
         view.addSubview(closeButton)
         view.addSubview(sportmanImageView)
@@ -145,6 +152,11 @@ extension RepsWorkoutVC {
     private func setConstraints() {
   
         NSLayoutConstraint.activate([
+            statisticImage.topAnchor.constraint(equalTo: view.topAnchor, constant: 0),
+            statisticImage.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0),
+            statisticImage.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0),
+            statisticImage.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0),
+            
             newWorkoutLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 10),
             newWorkoutLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor)
         ])
@@ -152,8 +164,8 @@ extension RepsWorkoutVC {
         NSLayoutConstraint.activate([
             closeButton.centerYAnchor.constraint(equalTo: newWorkoutLabel.centerYAnchor),
             closeButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
-            closeButton.heightAnchor.constraint(equalToConstant: 30),
-            closeButton.widthAnchor.constraint(equalToConstant: 30)
+            closeButton.heightAnchor.constraint(equalToConstant: 40),
+            closeButton.widthAnchor.constraint(equalToConstant: 40)
         ])
         
         NSLayoutConstraint.activate([

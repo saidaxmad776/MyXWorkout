@@ -10,30 +10,38 @@ import UIKit
 extension UIFont {
     
     static func robotoMedium12() -> UIFont? {
-        return UIFont(name: "Futura-Bold", size: 12)
+        return UIFont(name: "GillSans-BoldItalic", size: 12)
     }
     
     static func robotoMedium14() -> UIFont? {
-        return UIFont(name: "Futura-Bold", size: 14)
+        return UIFont(name: "GillSans-BoldItalic", size: 14)
     }
     
     static func robotoMedium16() -> UIFont? {
-        return UIFont(name: "Futura-Bold", size: 16)
+        return UIFont(name: "GillSans-BoldItalic", size: 16)
     }
     
     static func robotoMedium18() -> UIFont? {
-        return UIFont(name: "Futura-Bold", size: 18)
+        return UIFont(name: "GillSans-BoldItalic", size: 18)
     }
     
     static func robotoMedium22() -> UIFont? {
-        return UIFont(name: "Futura-Bold", size: 22)
+        return UIFont(name: "GillSans-BoldItalic", size: 22)
     }
     
     static func robotoMedium24() -> UIFont? {
-        return UIFont(name: "Futura-Bold", size: 24)
+        return UIFont(name: "GillSans-BoldItalic", size: 24)
     }
     
     //Bold
+    static func robotoBold12() -> UIFont? {
+        return UIFont(name: "Futura-Bold", size: 12)
+    }
+    
+    static func robotoBold14() -> UIFont? {
+        return UIFont(name: "Futura-Bold", size: 14)
+    }
+    
     static func robotoBold16() -> UIFont? {
         return UIFont(name: "Futura-Bold", size: 16)
     }

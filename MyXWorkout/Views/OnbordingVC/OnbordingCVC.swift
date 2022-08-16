@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Spring
 
 class OnbordingCVC: UICollectionViewCell {
     
@@ -17,8 +18,8 @@ class OnbordingCVC: UICollectionViewCell {
         return imageView
     }()
     
-    private let topLabel: UILabel = {
-       let label = UILabel()
+    private let topLabel: SpringLabel = {
+       let label = SpringLabel()
 //        label.text = "Have a good health"
         label.textColor = .specialGreen
         label.font = .robotoBold24()
@@ -27,8 +28,8 @@ class OnbordingCVC: UICollectionViewCell {
         return label
     }()
     
-    private let bottomLabel: UILabel = {
-       let label = UILabel()
+    private let bottomLabel: SpringLabel = {
+       let label = SpringLabel()
 //        label.text = "Bad body shape, poor sleep, lack of strength, weight gain, weak bones, easily traumatized body, depressed, stressed, poor metabolism, poor resistance"
         label.textColor = .white
         label.font = .robotoMedium16()
@@ -37,12 +38,15 @@ class OnbordingCVC: UICollectionViewCell {
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
+    
+     
 
     override init(frame: CGRect) {
         super.init(frame: frame)
         
         setupViews()
         setConstraints()
+        labelAnimation()
     }
     
     required init?(coder: NSCoder) {
@@ -56,6 +60,23 @@ class OnbordingCVC: UICollectionViewCell {
         addSubview(topLabel)
         addSubview(bottomLabel)
        
+    }
+    
+    private func labelAnimation() {
+        
+        topLabel.animation = "zoomIn"
+        topLabel.curve = "linear"
+        topLabel.force = 2
+        topLabel.duration = 2
+        topLabel.delay = 0.5
+        topLabel.animate()
+        
+        bottomLabel.animation = "zoomIn"
+        bottomLabel.curve = "linear"
+        bottomLabel.force = 2
+        bottomLabel.duration = 2
+        bottomLabel.delay = 0.5
+        bottomLabel.animate()
     }
     
     func cellConfigure(model: OnboardingStruct) {

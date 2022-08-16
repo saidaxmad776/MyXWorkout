@@ -101,6 +101,7 @@ class TimerWorkoutView: UIView {
     var repsStackView = UIStackView()
     var setsStackView = UIStackView()
     
+    weak var cellNextSetTimerDelegate: NextSetTimerProtocol?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -137,11 +138,11 @@ class TimerWorkoutView: UIView {
     }
     
     @objc private func editingButtonTapped() {
-        
+        cellNextSetTimerDelegate?.editingTimerTapped()
     }
     
     @objc private func nextSetsButtonTapped() {
-        
+        cellNextSetTimerDelegate?.nextSetTimerTapped()
     }
     
     private func setConstraints() {

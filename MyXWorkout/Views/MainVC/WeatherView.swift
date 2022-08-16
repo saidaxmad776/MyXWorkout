@@ -18,7 +18,7 @@ class WeatherView: UIView {
     
     private let weatherStatusLabel: UILabel = {
         let label = UILabel()
-//        label.text = "Солнечно"
+        label.font = .robotoMedium24()
         label.adjustsFontSizeToFitWidth = true
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -26,7 +26,7 @@ class WeatherView: UIView {
     
     private let weatherDiscriptionLabel: UILabel = {
         let label = UILabel()
-//        label.text = "Хорошая погода, чтобы позаниматься на улице"
+        label.font = .robotoMedium18()
         label.adjustsFontSizeToFitWidth = true
         label.numberOfLines = 2
         label.translatesAutoresizingMaskIntoConstraints = false

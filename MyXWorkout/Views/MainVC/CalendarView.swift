@@ -40,7 +40,7 @@ class CalendarView: UIView {
     }
     
     private func setupView() {
-        backgroundColor = .red
+        backgroundColor = .specialGreen
         layer.cornerRadius = 10
         addShadowOnView()
         translatesAutoresizingMaskIntoConstraints = false
